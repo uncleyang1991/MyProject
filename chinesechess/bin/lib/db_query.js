@@ -1,6 +1,10 @@
 var mysql = require('mysql');
 var dbconfig = require('./config/dbconfig.js');
 
+/**
+ * 数据库查询
+ * @type {Pool}
+ */
 var pool = mysql.createPool({
     host:dbconfig.host,
     user:dbconfig.user,
@@ -9,7 +13,12 @@ var pool = mysql.createPool({
     port:dbconfig.port
 });
 
-var db_pool = function(sql,callback){
+/**
+ * 数据库查询
+ * @param sql
+ * @param callback
+ */
+var db_query = function(sql,callback){
     pool.getConnection(function(err,connection){
         if(err){
             console.log("连接池异常:"+err.message);
@@ -26,4 +35,4 @@ var db_pool = function(sql,callback){
 }
 console.log('数据库配置完毕');
 
-module.exports = db_pool;
+module.exports = db_query;
