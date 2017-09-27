@@ -1,14 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13b8e8ca-5e88-458d-a00a-10418a3395f1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/css/style.css" afterPath="" />
+    <list default="true" id="13b8e8ca-5e88-458d-a00a-10418a3395f1" name="Default" comment="中国象棋模块添加依赖库">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/uws.unsuccessfulbuild" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/uws.vcxprojResolveAssemblyReference.cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/uws.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/vc100.pdb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/win_delay_load_hook.obj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_darwin_46.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_darwin_47.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_darwin_48.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_darwin_51.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_linux_46.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_linux_47.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_linux_48.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_linux_51.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_win32_48.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws_win32_51.node" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/LICENCE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/after/test/after-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/arraybuffer.slice/test/slice-buffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/backo2/test/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64-arraybuffer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64id/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64id/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64id/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64id/lib/base64id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/base64id/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/better-assert/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/.zuul.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/blob/test/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/callsite/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-bind/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-emitter/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-emitter/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-emitter/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-emitter/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-emitter/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/component-inherit/test/inherit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/engine.io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transports/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transports/polling-jsonp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transports/polling-xhr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transports/polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/transports/websocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/lib/xmlhttprequest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-client/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/lib/browser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/lib/keys.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/lib/utf8.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/engine.io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transports/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transports/polling-jsonp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transports/polling-xhr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transports/polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/lib/transports/websocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/node_modules/accepts/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/node_modules/accepts/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/node_modules/accepts/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/node_modules/accepts/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/node_modules/accepts/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/engine.io/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-binary2/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-binary2/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-binary2/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-binary2/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-binary2/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/has-cors/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/indexof/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/isarray/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/isarray/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/isarray/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-assign/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-assign/license" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-assign/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-assign/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/object-component/test/object.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parsejson/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseqs/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/parseuri/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-adapter/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-adapter/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-adapter/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-adapter/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-adapter/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/dist/socket.io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/dist/socket.io.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/dist/socket.io.slim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/dist/socket.io.slim.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/lib/manager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/lib/on.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/lib/url.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-client/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/binary.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/is-buffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/lib/client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/lib/namespace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/socket.io/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/to-array/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/to-array/LICENCE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/to-array/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/to-array/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/to-array/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ultron/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ultron/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ultron/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/binding.gyp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.22480.read.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.22480.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.3240.read.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.3240.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.7460.read.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.7460.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.8812.read.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.8812.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/CL.read.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/cl.command.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/cl.write.1.tlog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/Release/obj/uws/uws.lastbuildstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/action_after_build.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/action_after_build.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/binding.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/config.gypi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/uws.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build/uws.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/build_log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Asio.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Backend.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Epoll.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Epoll.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Extensions.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Extensions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Group.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Group.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/HTTPSocket.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/HTTPSocket.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Hub.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Hub.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Libuv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Networking.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Networking.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Node.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Node.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Socket.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/Socket.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/WebSocket.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/WebSocket.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/WebSocketProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/addon.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/addon.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/http.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/src/uWS.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/uws/uws.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/BufferUtil.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/Constants.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/ErrorCodes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/EventTarget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/Extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/PerMessageDeflate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/Receiver.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/Sender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/Validation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/WebSocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/lib/WebSocketServer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/browser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/node_modules/safe-buffer/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/ws/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/autotest.watchr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/example/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/lib/XMLHttpRequest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-constants.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-exceptions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-headers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-redirect-302.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-redirect-303.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-redirect-307.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-request-methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/test-request-protocols.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/xmlhttprequest-ssl/tests/testdata.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/yeast/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/yeast/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/yeast/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/yeast/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/css/jquery.dataTables.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/fabric.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/jquery-1.11.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/socket.io.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/bin/www" afterPath="$PROJECT_DIR$/chinesechess/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/package-lock.json" afterPath="$PROJECT_DIR$/chinesechess/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/package.json" afterPath="$PROJECT_DIR$/chinesechess/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/routes/index.js" afterPath="$PROJECT_DIR$/chinesechess/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/views/index.ejs" afterPath="$PROJECT_DIR$/chinesechess/views/index.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,8 +352,8 @@
       <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinesechess/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+            <state relative-caret-position="231">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -351,7 +669,7 @@
       <workItem from="1506413826900" duration="1401000" />
       <workItem from="1506475880910" duration="11778000" />
       <workItem from="1506494198649" duration="1331000" />
-      <workItem from="1506495601820" duration="5420000" />
+      <workItem from="1506495601820" duration="5546000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1504598268542</created>
@@ -402,11 +720,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506499213087</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="中国象棋模块添加依赖库">
+      <created>1506501985106</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506501985106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34855000" />
+    <option name="totallyTimeSpent" value="34981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -423,7 +748,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -455,7 +780,8 @@
     <MESSAGE value="测试提交" />
     <MESSAGE value="提交" />
     <MESSAGE value="创建中国象棋模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建中国象棋模块" />
+    <MESSAGE value="中国象棋模块添加依赖库" />
+    <option name="LAST_COMMIT_MESSAGE" value="中国象棋模块添加依赖库" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,8 +1047,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chinesechess/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+        <state relative-caret-position="231">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
