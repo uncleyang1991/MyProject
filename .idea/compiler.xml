@@ -6,14 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core" />
         <module name="MyProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="chinesechess_server" target="1.5" />
-      <module name="chinesechess_service" target="1.5" />
-      <module name="core" target="1.5" />
       <module name="MyProject" target="1.5" />
     </bytecodeTargetLevel>
   </component>
