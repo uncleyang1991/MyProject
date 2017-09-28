@@ -44,4 +44,21 @@ router.post('/login',function(req,res){
 router.get('/floor',function(req,res){
     res.render('floor');
 });
+var service = require('../bin/server/service.js');
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('index', { title: '中国象棋' });
+});
+
+//登陆请求
+router.get('/login',function(req,res){
+    var params = req.query;
+    service.login(
+        params,
+        function(result){
+
+        }
+    );
+});
 module.exports = router;
