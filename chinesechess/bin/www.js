@@ -5,7 +5,6 @@
 var app = require('../app');
 var debug = require('debug')('chinesechess:server');
 var http = require('http');
-var db_query = require('./lib/db_query.js');
 
 /**
  * Get port from environment and store in Express.

@@ -1,5 +1,6 @@
 var mysql = require('mysql');
 var dbconfig = require('./config/dbconfig.js');
+var async = require('async');
 
 /**
  * 数据库查询
@@ -18,7 +19,8 @@ var pool = mysql.createPool({
  * @param sql
  * @param callback
  */
-var db_query = function(sql,callback){
+exports.query = function(sql){
+    var result = new Array(1);
     pool.getConnection(function(err,connection){
         if(err){
             console.log("连接池异常:"+err.message);
@@ -27,12 +29,12 @@ var db_query = function(sql,callback){
                 if (qerr) {
                     console.log("sql异常:"+qerr.message);
                 } else {
-                    callback(rows,fields);
+                   result[0] = rows;
+                   console.log('li:'+result);
                 }
             });
         }
-    });
+    })
+    console.log(result);
 }
 console.log('数据库配置完毕');
-
-module.exports = db_query;
