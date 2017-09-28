@@ -27,7 +27,7 @@ var db_query = function(sql,callback){
                 if (qerr) {
                     console.log("sql异常:"+qerr.message);
                 } else {
-                    callback(rows,fields);
+                    callback(rows);
                 }
             });
         }
