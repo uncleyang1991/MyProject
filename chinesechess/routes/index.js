@@ -16,23 +16,21 @@ router.all('*',function(req,res,next){
     }
 });
 
-/* GET home page. */
+//登录页面
 router.get('/', function(req, res, next) {
-    res.render('login', { title: '' });
+    res.render('login', { title: '登录' });
 });
-
 
 //登陆请求
 router.post('/login',function(req,res){
     var params = req.body;
-    var player;
     db_query(
         'select id,username,nickname from player where username=\''+params.username+'\' and password=\''+md5(params.password)+'\'',
         function(result){
             if(result.length==1){
-                player = result[0];
+                var player = result[0];
                 req.session.player = player;
-                res.send({success:true,msg:player});
+                res.send({success:true});
             }else{
                 res.send({success:false,msg:"用户名或密码错误"});
             }
@@ -42,23 +40,9 @@ router.post('/login',function(req,res){
 
 //跳转大厅
 router.get('/floor',function(req,res){
-    res.render('floor');
-});
-var service = require('../bin/server/service.js');
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: '中国象棋' });
+    res.render('floor',{title:'大厅'});
 });
 
-//登陆请求
-router.get('/login',function(req,res){
-    var params = req.query;
-    service.login(
-        params,
-        function(result){
 
-        }
-    );
-});
+
 module.exports = router;

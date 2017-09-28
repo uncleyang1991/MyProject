@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>floor</title>
+    <title><%=title%></title>
+    <link rel="shortcut icon" href="/img/favicon.ico" >
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/jquery.dataTables.min.css' />
+    <link rel='stylesheet' href='/css/liMarquee.css' />
+
+    <script src="/js/lib/socket.io.js"></script>
+    <script src="/js/lib/jquery-1.11.1.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    <script src="/js/lib/fabric.min.js"></script>
+    <script src="/js/lib/jquery.liMarquee.js"></script>
+    <script src="/js/lib/jquery.dataTables.min.js"></script>
+    <style>
+        div {
+            /* border:1px solid blue;*/
+        }
+    </style>
 </head>
 <body>
-
+    <div style="width:800px;height:500px;position:fixed;top:0px;left:0px;right:0px;bottom:0px;margin:auto;">
+        <div id="bulletin" style="width:100%">
+           <p style="font-size:16px;margin-top:10px;"><strong>测试公告</strong></p>
+        </div>
+        <div style="float:left;width:70%;height:90%;">
+            <table id="room_list"></table>
+            <!--房间列表-->
+        </div>
+        <div style="float:left;width:30%;height:90%;">
+            测试信息
+            <!--信息区-->
+        </div>
+        <div style="clear: left"></div>
+    </div>
 </body>
+<script src="/js/floor.js"></script>
 </html>
