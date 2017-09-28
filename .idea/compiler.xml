@@ -11,6 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="chinesechess_server" target="1.5" />
+      <module name="chinesechess_service" target="1.5" />
       <module name="core" target="1.5" />
       <module name="MyProject" target="1.5" />
     </bytecodeTargetLevel>
