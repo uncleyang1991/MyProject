@@ -43,6 +43,10 @@ router.get('/floor',function(req,res){
     res.render('floor',{title:'大厅'});
 });
 
+router.all('/room_list',function(req,res){
+    res.send({"data":{"a":"123","b":"456","c":"789"}});
+});
+
 
 
 module.exports = router;
