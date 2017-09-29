@@ -108,8 +108,7 @@ $(function(){
                     $('#input_modal_createroom_name').val('');
                     $('#modal_createroom').modal('hide');
                     //创建成功后直接进入游戏界面
-
-
+                    window.location.href='/checkerboard';
                 }else{
                     alert(msg.msg);
                 }

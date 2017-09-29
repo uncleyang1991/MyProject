@@ -2,10 +2,16 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('chinesechess:server');
-var http = require('http');
 
+var debug = require('debug')('chinesechess:server');
+var app = require('../app');
+var server = require('http').Server(app);
+global.server = server;
+
+var io = require('socket.io')(server);
+    io.on('connection',function(socket){
+        console.log('新用户连接');
+    });
 /**
  * Get port from environment and store in Express.
  */
@@ -17,7 +23,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+//var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

@@ -4,6 +4,9 @@ var md5 = require('../bin/util/md5.js');
 var idtools = require('../bin/util/idtools.js');
 var db = require('../bin/lib/db.js');
 
+//初始化套接字服务
+var io = require('../bin/server/SocketService.js');
+io.init();
 //登录拦截
 router.all('*',function(req,res,next){
     if(!req.session.player){
@@ -146,6 +149,11 @@ router.all('/joinroom',function(req,res){
 router.all('/logout',function(req,res){
     req.session.player = null;
     res.send({success:true});
+});
+
+//跳转到棋盘界面
+router.all('/checkerboard',function(req,res){
+    res.render('checkerboard',{title:'测试棋盘'});
 });
 
 module.exports = router;
