@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/css/jquery.dataTables.min.css' />
     <link rel='stylesheet' href='/css/liMarquee.css' />
+    <link rel='stylesheet' href='/css/floor.css' />
 
     <script src="/js/lib/socket.io.js"></script>
     <script src="/js/lib/jquery-1.11.1.js"></script>
@@ -14,44 +15,79 @@
     <script src="/js/lib/fabric.min.js"></script>
     <script src="/js/lib/jquery.liMarquee.js"></script>
     <script src="/js/lib/jquery.dataTables.min.js"></script>
-    <style>
-        div {
-            /* border:1px solid blue;*/
-        }
-        #room_list tbody{
-            align-items: center;
-        }
-        #room_list tbody tr:hover{
-            background: #5bc0de;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-    <div style="width:800px;height:500px;position:fixed;top:0px;left:0px;right:0px;bottom:0px;margin:auto;">
-        <div id="bulletin" style="width:100%">
-           <p style="font-size:16px;margin-top:10px;"><strong>测试公告</strong></p>
+    <div id="main_div">
+        <div id="bulletin">
+           <p><strong id="floor_notice"></strong></p>
         </div>
-        <div style="float:left;width:70%;height:90%;margin-top:10px;">
-            <table id="room_list" style="table-layout:fixed">
+        <div id="room_div" class="fleft">
+            <!--房间列表-->
+            <table id="room_list">
                 <thead>
                 <tr>
                     <th>房间号</th>
                     <th>房间名称</th>
                     <th>房主</th>
                     <th>状态</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-            <!--房间列表-->
         </div>
-        <div style="float:left;width:30%;height:90%;">
-            测试信息
+        <div id="information_div" class="fleft">
             <!--信息区-->
+            <p align="center">
+                <button id="btn_flush_room" type="button" class="btn btn-success">刷新房间</button>
+                <button id="btn_logout" type="button" class="btn btn-success">退出大厅</button>
+
+            </p>
+            <p align="center">
+                <button id="btn_createroom" type="button" class="btn btn-success">创建房间</button>
+                <button id="btn_joinroom" type="button" class="btn btn-success">加入房间</button>
+            </p>
         </div>
-        <div style="clear: left"></div>
+        <div class="cleft"></div>
+    </div>
+
+    <!--退出大厅模态框-->
+    <div id="modal_logout" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">退出</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定要离开大厅吗?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="btn_modal_logout_enter">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--创建房间模态框-->
+    <div id="modal_createroom" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">创建房间</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="input_modal_createroom_name" placeholder="房间名">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="btn_modal_createroom_enter">创建</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="/js/floor.js"></script>

@@ -1,8 +1,8 @@
 {
                 "sProcessing": "正在刷新...",
-                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sLengthMenu": "",
                 "sZeroRecords": "没有房间信息",
-                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfo": "",
                 "sInfoEmpty": "",
                 "sInfoFiltered": "",
                 "sInfoPostFix": "",
