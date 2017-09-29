@@ -1,5 +1,5 @@
 {
-                "sProcessing": "处理中...",
+                "sProcessing": "正在刷新...",
                 "sLengthMenu": "显示 _MENU_ 项结果",
                 "sZeroRecords": "没有房间信息",
                 "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
@@ -8,13 +8,13 @@
                 "sInfoPostFix": "",
                 "sSearch": "搜索:",
                 "sUrl": "",
-                "sEmptyTable": "表中数据为空",
-                "sLoadingRecords": "载入中...",
+                "sEmptyTable": "暂时没有房间",
+                "sLoadingRecords": "正在刷新...",
                 "sInfoThousands": ",",
                 "oPaginate": {
                     "sFirst": "首页",
-                    "sPrevious": "上页",
-                    "sNext": "下页",
+                    "sPrevious": "上翻",
+                    "sNext": "下翻",
                     "sLast": "末页"
                 },
                 "oAria": {

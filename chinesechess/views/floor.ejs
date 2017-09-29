@@ -18,6 +18,13 @@
         div {
             /* border:1px solid blue;*/
         }
+        #room_list tbody{
+            align-items: center;
+        }
+        #room_list tbody tr:hover{
+            background: #5bc0de;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -26,12 +33,13 @@
            <p style="font-size:16px;margin-top:10px;"><strong>测试公告</strong></p>
         </div>
         <div style="float:left;width:70%;height:90%;margin-top:10px;">
-            <table id="room_list">
+            <table id="room_list" style="table-layout:fixed">
                 <thead>
                 <tr>
-                    <th>用户账号</th>
-                    <th>用户名称</th>
-                    <th>移动电话</th>
+                    <th>房间号</th>
+                    <th>房间名称</th>
+                    <th>房主</th>
+                    <th>状态</th>
                 </tr>
                 </thead>
                 <tbody>

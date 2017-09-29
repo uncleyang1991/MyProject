@@ -18,12 +18,13 @@ var pool = mysql.createPool({
  * @param sql
  * @param callback
  */
-var db_query = function(sql,callback){
+exports.query = function(sql,callback){
     pool.getConnection(function(err,connection){
         if(err){
             console.log("连接池异常:"+err.message);
         }else {
             connection.query(sql, function (qerr, rows, fields) {
+                connection.release();
                 if (qerr) {
                     console.log("sql异常:"+qerr.message);
                 } else {
@@ -33,6 +34,10 @@ var db_query = function(sql,callback){
         }
     });
 }
-console.log('数据库配置完毕');
 
-module.exports = db_query;
+exports.getData = function(result){
+
+    return data;
+}
+
+console.log('数据库配置完毕');

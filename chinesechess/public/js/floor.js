@@ -11,16 +11,15 @@ $(function(){
         "bProcessing": true,
         //分页
         "paging": true,
+        "bStateSave" : true,
+        "sScrollY": "360.5px", //支持垂直滚动
         //从服务器处理分页
         "bServerSide": true,
         //查询请求action url
         "ajax": {
             "url": "/room_list",
             "type":"post",
-            "dataSrc": "data",
-            "data": function ( d ) {
-
-            }
+            "dataSrc": "data"
         },
         // 客户端传给服务器的查询参数为sSearch,服务端根据条件查出数据源即可
         //'bFilter':true ,
@@ -29,26 +28,13 @@ $(function(){
         //每页显示多少条数据
         "lengthChange":false,
         //每页显示数量：5条记录
-        "iDisplayLength": 5,
+        "iDisplayLength": 10,
         "columns": [
-            {"data": "a"},
-            {"data": "b"},
-            {"data": "c"}
+            {"data": "no","width":"15%"},
+            {"data": "name","width":"40%"},
+            {"data": "owner","width":"30%"},
+            {"data": "state","width":"15%"}
         ],
-        "columnDefs": [
-        {
-            "targets": 0,
-            "data":"a",
-            "width":"12%"
-        },{
-            "targets":1,
-            "data":"b",
-            "width":"11%"
-        },{
-            "targets": 2,
-            "data":"c",
-            "width":"10%"
-        }],
 
         //语言
         "language": {

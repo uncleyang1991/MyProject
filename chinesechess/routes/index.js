@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var md5 = require('../bin/util/md5.js');
-var db_query = require('../bin/lib/db_query.js');
+var idtools = require('../bin/util/idtools.js');
+var db = require('../bin/lib/db.js');
 
 //登录拦截
 router.all('*',function(req,res,next){
@@ -24,7 +25,7 @@ router.get('/', function(req, res, next) {
 //登陆请求
 router.post('/login',function(req,res){
     var params = req.body;
-    db_query(
+    db.query(
         'select id,username,nickname from player where username=\''+params.username+'\' and password=\''+md5(params.password)+'\'',
         function(result){
             if(result.length==1){
@@ -44,7 +45,13 @@ router.get('/floor',function(req,res){
 });
 
 router.all('/room_list',function(req,res){
-    res.send({"data":{"a":"123","b":"456","c":"789"}});
+    var params = req.body;
+    db.query(
+        'select a.* from room a join (select id from room order by state,no limit '+params.start+','+params.length+') b on a.id=b.id',
+        function(result){
+            res.send({"data":result,"iTotalRecords":11});
+        }
+    );
 });
 
 
