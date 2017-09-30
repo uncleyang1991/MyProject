@@ -6,14 +6,21 @@
     <link rel="shortcut icon" href="/img/favicon.ico" >
     <link rel='stylesheet' href='/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/css/floor.css' />
+    <link rel='stylesheet' href='/css/checkerboard.css' />
 
     <script src="/js/lib/socket.io.js"></script>
     <script src="/js/lib/jquery-1.11.1.js"></script>
     <script src="/js/lib/bootstrap.min.js"></script>
-    <script src="/js/lib/fabric.min.js"></script>
+    <script src="/js/lib/fabric.js"></script>
 </head>
 <body>
 
 </body>
+    <div id="main_div">
+        <!--board-->
+        <div id="checkerboard_div" class="checkerboard">
+            <canvas id="checkerboard_canvas" width="550" height="550"></canvas>
+        </div>
+    </div>
     <script src="/js/checkerboard.js"></script>
 </html>

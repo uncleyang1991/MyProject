@@ -1,0 +1,24 @@
+div {
+    /*border:1px solid blue;*/
+}
+.fleft{
+    float:left;
+}
+.cleft{
+    clear:left;
+}
+#main_div{
+    width:800px;
+    height:550px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.checkerboard{
+    height:100%;
+    width:550px;
+}
