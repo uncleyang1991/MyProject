@@ -1,4 +1,17 @@
+var playerInfo;
 $(function(){
+    //获取用户信息
+    $.ajax({
+        url:'/playerInfo',
+        success:function(msg){
+            if(msg.success){
+                playerInfo = msg.msg;
+            }else{
+                alert('信息拉取出错!');
+                window.location.href='/';
+            }
+        }
+    });
 
     //加载大厅公告
     $.ajax({
@@ -108,7 +121,7 @@ $(function(){
                     $('#input_modal_createroom_name').val('');
                     $('#modal_createroom').modal('hide');
                     //创建成功后直接进入游戏界面
-                    window.location.href='/checkerboard';
+                    window.location.href='/checkerboard?roomno='+msg.msg;
                 }else{
                     alert(msg.msg);
                 }
@@ -135,12 +148,10 @@ $(function(){
                     if(msg.success){
                         roomListReload();
                         //加入房间成功
-
-
+                        window.location.href='/checkerboard?roomno='+msg.msg;
                     }else{
                         alert(msg.msg);
                     }
-
                 }
             });
         }

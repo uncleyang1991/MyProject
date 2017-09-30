@@ -4,11 +4,8 @@ var md5 = require('../bin/util/md5.js');
 var idtools = require('../bin/util/idtools.js');
 var db = require('../bin/lib/db.js');
 
-//初始化套接字服务
-var io = require('../bin/server/SocketService.js');
-io.init();
 //登录拦截
-router.all('*',function(req,res,next){
+/*router.all('*',function(req,res,next){
     if(!req.session.player){
         if(req.url=='/'||req.url=='/login'){
             next();
@@ -18,7 +15,7 @@ router.all('*',function(req,res,next){
     }else{
         next();
     }
-});
+});*/
 
 //登录页面
 router.all('/', function(req, res, next) {
@@ -40,6 +37,13 @@ router.all('/login',function(req,res){
             }
         }
     );
+});
+
+//获取session中的登录用户信息
+router.all('/playerInfo',function(req,res){
+    if(req.session.player){
+        res.send({success:true,msg:req.session.player});
+    }
 });
 
 //跳转大厅
@@ -100,7 +104,7 @@ router.all('/createroom',function(req,res){
                                 '0,now())',
                                 function(create_result){
                                     if(create_result.affectedRows){
-                                        res.send({success:true});
+                                        res.send({success:true,msg:minno});
                                     }else{
                                         //创建房间失败,error
                                         res.send({success:false,msg:'错误,创建房间失败!'});
@@ -125,14 +129,14 @@ router.all('/createroom',function(req,res){
 router.all('/joinroom',function(req,res){
     var params = req.body;
     db.query(
-        'select state from room where id=\''+params.roomId+'\'',
+        'select state,no from room where id=\''+params.roomId+'\'',
         function(state_result){
             if(state_result[0].state==0){
                 db.query(
                     'update room set state=1 where id=\''+params.roomId+'\'',
                     function(update_result){
                         if(update_result.affectedRows){
-                            res.send({success:true});
+                            res.send({success:true,msg:state_result[0].no});
                         }else{
                             res.send({success:false,msg:'错误,加入房间失败!'});
                         }
@@ -153,7 +157,7 @@ router.all('/logout',function(req,res){
 
 //跳转到棋盘界面
 router.all('/checkerboard',function(req,res){
-    res.render('checkerboard',{title:'测试棋盘'});
+    res.render('checkerboard',{title:req.query.roomno});
 });
 
 module.exports = router;

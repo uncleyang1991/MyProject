@@ -6,12 +6,11 @@
 var debug = require('debug')('chinesechess:server');
 var app = require('../app');
 var server = require('http').Server(app);
-global.server = server;
 
-var io = require('socket.io')(server);
-    io.on('connection',function(socket){
-        console.log('新用户连接');
-    });
+//启动监听客户端socket服务
+var socket_server = require('socket.io')(server);
+var socketService = require('./server/socketservice.js');
+socketService.init(socket_server);
 /**
  * Get port from environment and store in Express.
  */
