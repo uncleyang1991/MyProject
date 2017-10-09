@@ -474,7 +474,7 @@ function logic(x,y){
                 if(direction=='left_up'&&all[i].cx==selected.cx-75&&all[i].cy==selected.cy-75){
                     count++;
                     break;
-                }else if(direction=='right-up'&&all[i].cx==selected.cx+75&&all[i].cy==selected.cy-75){
+                }else if(direction=='right_up'&&all[i].cx==selected.cx+75&&all[i].cy==selected.cy-75){
                     count++;
                     break;
                 }else if(direction=='left_down'&&all[i].cx==selected.cx-75&&all[i].cy==selected.cy+75){
