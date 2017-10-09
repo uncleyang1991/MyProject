@@ -1,15 +1,6 @@
-div {
-    /*border:1px solid blue;*/
-}
-.fleft{
-    float:left;
-}
-.cleft{
-    clear:left;
-}
 #main_div{
     width:1100px;
-    height:750px;
+    height:780px;
     position:fixed;
     top:0;
     left:0;
@@ -20,5 +11,5 @@ div {
 
 .checkerboard{
     height:100%;
-    width:750px;
+    width:100%;
 }

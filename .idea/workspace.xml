@@ -2,288 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b8e8ca-5e88-458d-a00a-10418a3395f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/jiang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/ju.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/ma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/pao.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/shi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/xiang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/zu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/board_black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/board_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/bing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/ju.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/ma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/pao.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/shi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/shuai.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/xiang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/.jshintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/bench/colorParse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/dist/zrender.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/dist/zrender.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/jsdoc.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/Element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/Handler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/Layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/Storage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/animation/Animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/animation/Animator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/animation/Clip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/animation/easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/animation/requestAnimationFrame.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/arc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/cubic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/polygon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/quadratic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/contain/windingLine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/container/Group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/BoundingRect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/GestureMgr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/LRU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/PathProxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/arrayDiff.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/arrayDiff2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/bbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/curve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/guid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/log.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/matrix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/timsort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/core/vector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/dom/HandlerProxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/CompoundPath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Displayable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Gradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/LinearGradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Pattern.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/RadialGradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/States.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Style.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/Text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/poly.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/roundRect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/smoothBezier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/smoothSpline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/helper/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/mixin/RectText.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/mixin/Stateful.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Arc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/BezierCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Circle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Droplet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Ellipse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Heart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Isogon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Polygon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Polyline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Rect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Ring.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Rose.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Sector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Star.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/graphic/shape/Trochoid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/mixin/Animatable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/mixin/Draggable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/mixin/Eventful.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/mixin/Transformable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/graphic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/helper/ClippathManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/helper/Definable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/helper/GradientManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/svg/svg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/tool/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/tool/path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/tool/transformPath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/vml/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/vml/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/vml/graphic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/vml/vml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/lib/zrender.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/rollup.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/Element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/Handler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/Layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/Storage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/animation/Animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/animation/Animator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/animation/Clip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/animation/easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/animation/requestAnimationFrame.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/arc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/cubic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/polygon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/quadratic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/contain/windingLine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/container/Group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/BoundingRect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/GestureMgr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/LRU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/PathProxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/arrayDiff.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/arrayDiff2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/bbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/curve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/guid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/log.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/matrix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/timsort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/core/vector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/dom/HandlerProxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/CompoundPath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Displayable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Gradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/LinearGradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Pattern.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/RadialGradient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/States.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Style.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/Text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/fixClipWithShadow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/poly.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/roundRect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/smoothBezier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/smoothSpline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/helper/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/mixin/RectText.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/mixin/Stateful.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Arc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/BezierCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Circle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Droplet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Ellipse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Heart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Isogon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Polygon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Polyline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Rect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Ring.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Rose.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Sector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Star.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/graphic/shape/Trochoid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/mixin/Animatable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/mixin/Draggable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/mixin/Eventful.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/mixin/Transformable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/graphic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/helper/ClippathManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/helper/Definable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/helper/GradientManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/svg/svg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/tool/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/tool/path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/tool/transformPath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/vml/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/vml/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/vml/graphic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/vml/vml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/node_modules/zrender/src/zrender.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/esl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/Group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/Handler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/Layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/Painter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/Storage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/animation/Animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/animation/Clip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/animation/easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/dep/excanvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/dep/excanvas2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/dep/excanvas3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Bubble.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/DynamicLine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Ring.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Spin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/loadingEffect/Whirling.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/macro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/mixin/Eventful.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/mixin/Transformable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/BezierCurve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Circle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Droplet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Ellipse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Heart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Isogon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Path.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Polygon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Polyline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Rectangle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Ring.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Rose.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Sector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/ShapeBundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Star.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/Trochoid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/util/PathProxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/util/dashedLineTo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/util/smoothBezier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/shape/util/smoothSpline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/area.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/computeBoundingBox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/curve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/guid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/http.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/log.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/math.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/matrix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/tool/vector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/js/lib/src/zrender.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/img/board.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/js/lib/fabric.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/board_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/img/sign.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chinesechess/public/素材.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/img/board_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/img/board_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chinesechess/public/img/favicon.ico" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/package-lock.json" afterPath="$PROJECT_DIR$/chinesechess/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/package.json" afterPath="$PROJECT_DIR$/chinesechess/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/public/css/checkerboard.css" afterPath="$PROJECT_DIR$/chinesechess/public/css/checkerboard.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/public/js/checkerboard.js" afterPath="$PROJECT_DIR$/chinesechess/public/js/checkerboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/views/checkerboard.ejs" afterPath="$PROJECT_DIR$/chinesechess/views/checkerboard.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/views/floor.ejs" afterPath="$PROJECT_DIR$/chinesechess/views/floor.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chinesechess/views/login.ejs" afterPath="$PROJECT_DIR$/chinesechess/views/login.ejs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/chinesechess/public/img/black/jiang.png" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/king.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/chinesechess/public/img/black/zu.png" afterPath="$PROJECT_DIR$/chinesechess/public/img/black/bing.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/chinesechess/public/img/red/shuai.png" afterPath="$PROJECT_DIR$/chinesechess/public/img/red/king.png" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -296,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinesechess/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="416">
+              <caret line="157" column="8" lean-forward="true" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -309,8 +43,8 @@
       <file leaf-file-name="checkerboard.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinesechess/views/checkerboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="910">
+              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -319,52 +53,28 @@
       <file leaf-file-name="checkerboard.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinesechess/public/css/checkerboard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkerboard.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="checkerboard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinesechess/public/js/checkerboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            <state relative-caret-position="4270">
+              <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
               <folding>
-                <element signature="e#1078#1282#0" expanded="false" />
-                <element signature="e#1328#1487#0" expanded="false" />
-                <element signature="e#1532#1692#0" expanded="false" />
-                <element signature="e#1737#1897#0" expanded="false" />
-                <element signature="e#1942#2102#0" expanded="false" />
-                <element signature="e#2147#2307#0" expanded="false" />
-                <element signature="e#2352#2513#0" expanded="false" />
-                <element signature="e#2558#2720#0" expanded="false" />
-                <element signature="e#2765#2924#0" expanded="false" />
-                <element signature="e#2969#3129#0" expanded="false" />
-                <element signature="e#3174#3333#0" expanded="false" />
-                <element signature="e#3378#3538#0" expanded="false" />
-                <element signature="e#3583#3749#0" expanded="false" />
-                <element signature="e#3794#3960#0" expanded="false" />
-                <element signature="e#4005#4167#0" expanded="false" />
-                <element signature="e#4212#4374#0" expanded="false" />
-                <element signature="e#4418#4583#0" expanded="false" />
-                <element signature="e#4627#4788#0" expanded="false" />
-                <element signature="e#4831#4993#0" expanded="false" />
-                <element signature="e#5036#5198#0" expanded="false" />
-                <element signature="e#5241#5403#0" expanded="false" />
-                <element signature="e#5446#5608#0" expanded="false" />
-                <element signature="e#5651#5810#0" expanded="false" />
-                <element signature="e#5853#6013#0" expanded="false" />
-                <element signature="e#6056#6211#0" expanded="false" />
-                <element signature="e#6254#6410#0" expanded="false" />
-                <element signature="e#6453#6608#0" expanded="false" />
-                <element signature="e#6651#6807#0" expanded="false" />
-                <element signature="e#6850#7012#0" expanded="false" />
-                <element signature="e#7055#7217#0" expanded="false" />
-                <element signature="e#7260#7418#0" expanded="false" />
-                <element signature="e#7461#7619#0" expanded="false" />
-                <element signature="e#7661#7822#0" expanded="false" />
+                <element signature="e#668#827#0" expanded="false" />
+                <element signature="n#!!block;n#line#0" expanded="false" />
+                <element signature="n#!!block;n#init_board#0" expanded="false" />
+                <element signature="n#!!block;n#init_checker#0" expanded="false" />
+                <element signature="n#!!block;n#vague#0" expanded="false" />
+                <element signature="n#!!block;n#move#0" expanded="false" />
+                <element signature="n#!!block;n#logic#0" expanded="false" />
+                <element signature="n#!!block;n#clickAction#0" expanded="false" />
+                <element signature="n#!!block;n#checker_sign#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -394,17 +104,19 @@
       <find>zu</find>
       <find>y:668</find>
       <find>y:20</find>
+      <find>black</find>
+      <find>16</find>
     </findStrings>
     <replaceStrings>
       <replace>192.168.100.239</replace>
       <replace>'</replace>
       <replace>roomListReload()</replace>
       <replace>roomListReload();</replace>
-      <replace>red</replace>
       <replace>红</replace>
       <replace>bing</replace>
       <replace>y:675</replace>
       <replace>y:9</replace>
+      <replace>red</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -462,11 +174,12 @@
         <option value="$PROJECT_DIR$/chinesechess/bin/test/test.js" />
         <option value="$PROJECT_DIR$/chinesechess/public/js/floor.js" />
         <option value="$PROJECT_DIR$/chinesechess/bin/server/socketservice.js" />
-        <option value="$PROJECT_DIR$/chinesechess/views/floor.ejs" />
-        <option value="$PROJECT_DIR$/chinesechess/routes/index.js" />
-        <option value="$PROJECT_DIR$/chinesechess/public/css/checkerboard.css" />
         <option value="$PROJECT_DIR$/chinesechess/views/checkerboard.ejs" />
+        <option value="$PROJECT_DIR$/chinesechess/public/css/checkerboard.css" />
+        <option value="$PROJECT_DIR$/chinesechess/views/login.ejs" />
+        <option value="$PROJECT_DIR$/chinesechess/views/floor.ejs" />
         <option value="$PROJECT_DIR$/chinesechess/public/js/checkerboard.js" />
+        <option value="$PROJECT_DIR$/chinesechess/routes/index.js" />
       </list>
     </option>
   </component>
@@ -503,9 +216,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -542,8 +255,7 @@
               <item name="MyProject" type="462c0819:PsiDirectoryNode" />
               <item name="chinesechess" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="red" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyProject" type="b2602c69:ProjectViewProjectNode" />
@@ -561,12 +273,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -574,24 +286,24 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="D:/soft/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.5.0" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\MyProject\chinesechess\public\img\black" />
-      <recent name="E:\MyProject\chinesechess\public\img" />
-      <recent name="E:\MyProject\chinesechess\public\js\lib" />
-      <recent name="E:\MyProject\chinesechess\public\js" />
-      <recent name="D:\MyProject\chinesechess\public\js\lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MyProject\chinesechess\public\img" />
       <recent name="E:\MyProject\chinesechess\public\img\black" />
       <recent name="E:\MyProject\chinesechess\public\js\lib" />
       <recent name="E:\MyProject\chinesechess\bin\server" />
       <recent name="D:\MyProject\chinesechess\public\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MyProject\chinesechess\public\img\black" />
+      <recent name="E:\MyProject\chinesechess\public\img" />
+      <recent name="E:\MyProject\chinesechess\public\js\lib" />
+      <recent name="E:\MyProject\chinesechess\public\js" />
+      <recent name="D:\MyProject\chinesechess\public\js\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -700,7 +412,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="chinesechess" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/nodejs-8.5.0/node" path-to-js-file="www.js" working-dir="$PROJECT_DIR$/chinesechess/bin" />
+    <configuration name="chinesechess" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/soft/nodejs/8.5.0/node" path-to-js-file="www.js" working-dir="$PROJECT_DIR$/chinesechess/bin" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -744,7 +456,14 @@
       <workItem from="1506951578671" duration="244000" />
       <workItem from="1506951842384" duration="10421000" />
       <workItem from="1506962497419" duration="1685000" />
-      <workItem from="1507003240587" duration="5796000" />
+      <workItem from="1507003240587" duration="6082000" />
+      <workItem from="1507040058863" duration="8484000" />
+      <workItem from="1507048647918" duration="55000" />
+      <workItem from="1507048720822" duration="42000" />
+      <workItem from="1507193326302" duration="19903000" />
+      <workItem from="1507255995316" duration="13915000" />
+      <workItem from="1507359787780" duration="422000" />
+      <workItem from="1507512645096" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1504598268542</created>
@@ -865,11 +584,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506754374352</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="2017年10月3日13:46:50">
+      <created>1507009675203</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1507009675203</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109376000" />
+    <option name="totallyTimeSpent" value="152541000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -881,7 +607,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -891,11 +617,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.49791667" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27465534" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" x="0" y="34" width="1920" height="986" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27391306" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" x="0" y="34" width="1920" height="986" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.165625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -935,16 +661,16 @@
     <MESSAGE value="2017年9月30日10:34:04 用户连接装载与清除" />
     <MESSAGE value="2017年9月30日10:49:09 用户连接装载与清除" />
     <MESSAGE value="2017年9月30日14:51:42" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017年9月30日14:51:42" />
+    <MESSAGE value="2017年10月3日13:46:50" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017年10月3日13:46:50" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat/web-server/public/js/lib/socket.io.js" />
     <entry file="file://$PROJECT_DIR$/chatofpomelo/web-server/public/js/lib/pomeloclient.js" />
     <entry file="file://$PROJECT_DIR$/chat/web-server/public/js/lib/pomeloclient.js" />
     <entry file="file://$PROJECT_DIR$/chat/web-server/app.js" />
@@ -1038,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="90" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinesechess/bin/lib/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1056,20 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/public/js/floor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="153" column="21" lean-forward="false" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/views/floor.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="79" column="114" lean-forward="false" selection-start-line="79" selection-start-column="114" selection-end-line="79" selection-end-column="114" />
         </state>
       </provider>
     </entry>
@@ -1110,74 +815,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/public/img/board_black.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/chinesechess/public/img/board_black.png" />
+    <entry file="file://$PROJECT_DIR$/chinesechess/public/js/floor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="153" column="21" lean-forward="false" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/chinesechess/views/checkerboard.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="910">
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinesechess/public/css/checkerboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinesechess/views/checkerboard.ejs">
+    <entry file="file://$PROJECT_DIR$/chinesechess/public/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinesechess/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinesechess/views/floor.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinesechess/public/js/checkerboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        <state relative-caret-position="4270">
+          <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
           <folding>
-            <element signature="e#1078#1282#0" expanded="false" />
-            <element signature="e#1328#1487#0" expanded="false" />
-            <element signature="e#1532#1692#0" expanded="false" />
-            <element signature="e#1737#1897#0" expanded="false" />
-            <element signature="e#1942#2102#0" expanded="false" />
-            <element signature="e#2147#2307#0" expanded="false" />
-            <element signature="e#2352#2513#0" expanded="false" />
-            <element signature="e#2558#2720#0" expanded="false" />
-            <element signature="e#2765#2924#0" expanded="false" />
-            <element signature="e#2969#3129#0" expanded="false" />
-            <element signature="e#3174#3333#0" expanded="false" />
-            <element signature="e#3378#3538#0" expanded="false" />
-            <element signature="e#3583#3749#0" expanded="false" />
-            <element signature="e#3794#3960#0" expanded="false" />
-            <element signature="e#4005#4167#0" expanded="false" />
-            <element signature="e#4212#4374#0" expanded="false" />
-            <element signature="e#4418#4583#0" expanded="false" />
-            <element signature="e#4627#4788#0" expanded="false" />
-            <element signature="e#4831#4993#0" expanded="false" />
-            <element signature="e#5036#5198#0" expanded="false" />
-            <element signature="e#5241#5403#0" expanded="false" />
-            <element signature="e#5446#5608#0" expanded="false" />
-            <element signature="e#5651#5810#0" expanded="false" />
-            <element signature="e#5853#6013#0" expanded="false" />
-            <element signature="e#6056#6211#0" expanded="false" />
-            <element signature="e#6254#6410#0" expanded="false" />
-            <element signature="e#6453#6608#0" expanded="false" />
-            <element signature="e#6651#6807#0" expanded="false" />
-            <element signature="e#6850#7012#0" expanded="false" />
-            <element signature="e#7055#7217#0" expanded="false" />
-            <element signature="e#7260#7418#0" expanded="false" />
-            <element signature="e#7461#7619#0" expanded="false" />
-            <element signature="e#7661#7822#0" expanded="false" />
+            <element signature="e#668#827#0" expanded="false" />
+            <element signature="n#!!block;n#line#0" expanded="false" />
+            <element signature="n#!!block;n#init_board#0" expanded="false" />
+            <element signature="n#!!block;n#init_checker#0" expanded="false" />
+            <element signature="n#!!block;n#vague#0" expanded="false" />
+            <element signature="n#!!block;n#move#0" expanded="false" />
+            <element signature="n#!!block;n#logic#0" expanded="false" />
+            <element signature="n#!!block;n#clickAction#0" expanded="false" />
+            <element signature="n#!!block;n#checker_sign#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinesechess/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="157" column="8" lean-forward="true" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
