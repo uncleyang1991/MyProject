@@ -2,6 +2,8 @@ package org.uy.base.dao;
 
 import org.apache.ibatis.annotations.Param;
 import org.uy.base.dto.BaseDto;
+import org.uy.base.page.PageParameter;
+import org.uy.base.page.PageResult;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +13,7 @@ import java.util.Map;
  */
 public interface BaseDao {
 
-    <T extends BaseDto> List<T> find(@Param("params") Map<String,Object> params);
+    <T extends BaseDto> PageResult<T> find(PageParameter parameter);
 
     <T extends  BaseDto> T findById(@Param("id") String id);
 

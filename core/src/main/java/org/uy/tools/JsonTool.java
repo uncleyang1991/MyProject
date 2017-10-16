@@ -15,7 +15,7 @@ public class JsonTool {
     public static String obj2json(Object obj){
         String json = null;
         try {
-           json = mapper.writeValueAsString(obj);
+            json = mapper.writeValueAsString(obj);
         } catch (Exception e) {
             System.err.println("json转换错误");
             e.printStackTrace();
