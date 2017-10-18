@@ -19,6 +19,10 @@ public class PageResult<E> extends ArrayList<E>{
     //每页数据数量
     private Integer pageSize;
 
+    public PageResult(){
+
+    }
+
     public PageResult(List<E> result){
         this.addAll(result);
     }
