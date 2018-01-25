@@ -10,10 +10,10 @@ public class BaseDto implements Serializable{
 
     private static final long serialVersionUID = 1204380544129142578L;
 
-    private String id;
+    protected String id;
 
     //@JsonFormat(pattern = "yyyy年MM月dd日")
-    private Timestamp createtime;
+    protected Timestamp createtime;
 
     public String getId() {
         return id;
