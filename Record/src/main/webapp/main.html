@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>记录</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+</head>
+<body>
+
+    <div class="main">
+        <ul id="topTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#episode" data-toggle="tab">
+                    　剧　集　
+                </a>
+            </li>
+            <li>
+                <a href="#movie" data-toggle="tab">
+                    　电　影　
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content content-div">
+            <div class="tab-pane fade in active" id="episode">
+                <div class="episode-toolbar">
+                    <button type="button" title="添加新剧集" class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#addEpisodeModal"></button>
+                    <button id="episode_button_clear_item" type="button" title="清除条件" class="btn btn-info">清除条件</button>
+                    <button id="episode_button_search" type="button" title="按查询条件搜索" class="btn btn-primary glyphicon glyphicon-search"></button>
+
+                    <form id="episode_form_search_item" class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>剧　名</b></span>
+                                <input id="episode_input_search_item_name" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group col-xs-7">
+                                <span class="input-group-addon"><b>剧情类型</b></span>
+                                <input id="episode_input_search_item_type" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left:-95px;">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>种　类</b></span>
+                                <select id="episode_input_search_item_dramaType" class="form-control" style="width:80px;">
+                                    <option selected>所有</option>
+                                    <option>日剧</option>
+                                    <option>美剧</option>
+                                    <option>韩剧</option>
+                                    <option>英剧</option>
+                                    <option>动漫</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group col-xs-8">
+                                <span class="input-group-addon"><b>演　员</b></span>
+                                <input id="episode_input_search_item_performers" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left:-70px;">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>状　态</b></span>
+                                <select id="episode_input_search_item_state" class="form-control" style="width:90px;">
+                                    <option selected>所有</option>
+                                    <option>完结</option>
+                                    <option>未完结</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>季　番</b></span>
+                                <input id="episode_input_search_item_season_year" type="text" class="form-control" style="width:60px;" readonly>
+                                <span class="input-group-addon"><b>年</b></span>
+                                <select id="episode_input_search_item_season_season" class="form-control" style="width:80px;">
+                                    <option selected>所有</option>
+                                    <option>春季</option>
+                                    <option>夏季</option>
+                                    <option>秋季</option>
+                                    <option>冬季</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>观看状态</b></span>
+                                <select id="episode_input_search_item_watchState" class="form-control" style="width:100px;">
+                                    <option selected>所有</option>
+                                    <option>正在追</option>
+                                    <option>已看完</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="episode_table" class="table">
+                    <thead>
+                        <th>剧　名</th>
+                        <th>剧情类型</th>
+                        <th>种　类</th>
+                        <th>演　员</th>
+                        <th>集　数</th>
+                        <th>状　态</th>
+                        <th>播出时间</th>
+                        <th>观看时间</th>
+                        <th>观看状态</th>
+                        <th>星　级</th>
+                        <th></th>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="movie">
+                <p>
+                    电影列表
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加剧集模态框 -->
+    <div class="modal fade" id="addEpisodeModal" role="dialog" aria-labelledby="addEpisodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="addEpisodeModalLabel">添加新剧集</h4>
+                </div>
+                <form id="episode_form_add_episode">
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>剧　　名</b></span>
+                            <input id="addEpisodeModal_input_name" type="text" class="form-control" placeholder="必填">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>剧情类型</b></span>
+                            <input id="addEpisodeModal_input_type" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔" style="width:325px;">
+                            <span class="input-group-addon"><b>集　　数</b></span>
+                            <input id="addEpisodeModal_input_total" type="text" class="form-control" placeholder="必填" style="width:80px;">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>编　　剧</b></span>
+                            <input id="addEpisodeModal_input_writer" type="text" class="form-control" placeholder="选填">
+                            <span class="input-group-addon"><b>种　　类</b></span>
+                            <select id="addEpisodeModal_select_dramaType" class="form-control" style="width:100px;">
+                                <option>日剧</option>
+                                <option>美剧</option>
+                                <option>韩剧</option>
+                                <option>英剧</option>
+                                <option>动漫</option>
+                            </select>
+                            <span class="input-group-addon"><b>星　　级</b></span>
+                            <select id="addEpisodeModal_select_level" class="form-control" style="width:80px;">
+                                <option value="1">一星</option>
+                                <option value="2">二星</option>
+                                <option value="3">三星</option>
+                                <option value="4">四星</option>
+                                <option value="5">五星</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>演　　员</b></span>
+                            <input id="addEpisodeModal_input_performers" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>播出时间</b></span>
+                            <input id="addEpisodeModal_input_showTime" type="text" class="form-control" placeholder="选填" readonly>
+                            <span class="input-group-addon"><b>观看时间</b></span>
+                            <input id="addEpisodeModal_input_watchTime" type="text" class="form-control" placeholder="选填" readonly>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>状　　态</b></span>
+                            <select id="addEpisodeModal_select_state" class="form-control">
+                                <option>完结</option>
+                                <option>未完结</option>
+                            </select>
+                            <span class="input-group-addon"><b>观看状态</b></span>
+                            <input id="addEpisodeModal_input_watchState" type="text" class="form-control" placeholder="选填">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <textarea id="addEpisodeModal_textarea_introduce" class="form-control" rows="10" style="resize: none" placeholder="内容简介(选填)"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button id="addEpisodeModal_button_clear" type="button" class="btn btn-default">清除</button>
+                    <button id="addEpisodeModal_button_sync" type="button" class="btn btn-success">同步</button>
+                    <button id="addEpisodeModal_button_submit" type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 更新剧集模态框 -->
+    <div class="modal fade" id="updateEpisodeModal" role="dialog" aria-labelledby="updateEpisodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <input type="hidden" id="updateEpisodeModal_input_id">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="updateEpisodeModalLabel">更新剧集信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>剧　　名</b></span>
+                        <input id="updateEpisodeModal_input_name" type="text" class="form-control" placeholder="必填">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>剧情类型</b></span>
+                        <input id="updateEpisodeModal_input_type" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔" style="width:325px;">
+                        <span class="input-group-addon"><b>集　　数</b></span>
+                        <input id="updateEpisodeModal_input_total" type="text" class="form-control" placeholder="必填" style="width:80px;">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>编　　剧</b></span>
+                        <input id="updateEpisodeModal_input_writer" type="text" class="form-control" placeholder="选填">
+                        <span class="input-group-addon"><b>种　　类</b></span>
+                        <select id="updateEpisodeModal_select_dramaType" class="form-control" style="width:80px;">
+                            <option>日剧</option>
+                            <option>美剧</option>
+                            <option>韩剧</option>
+                            <option>英剧</option>
+                            <option>动漫</option>
+                        </select>
+                        <span class="input-group-addon"><b>星　　级</b></span>
+                        <select id="updateEpisodeModal_select_level" class="form-control" style="width:80px;">
+                            <option value="1">一星</option>
+                            <option value="2">二星</option>
+                            <option value="3">三星</option>
+                            <option value="4">四星</option>
+                            <option value="5">五星</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>演　　员</b></span>
+                        <input id="updateEpisodeModal_input_performers" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>播出时间</b></span>
+                        <input id="updateEpisodeModal_input_showTime" type="text" class="form-control" placeholder="选填" readonly>
+                        <span class="input-group-addon"><b>观看时间</b></span>
+                        <input id="updateEpisodeModal_input_watchTime" type="text" class="form-control" placeholder="选填" readonly>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>状　　态</b></span>
+                        <select id="updateEpisodeModal_select_state" class="form-control">
+                            <option>完结</option>
+                            <option>未完结</option>
+                        </select>
+                        <span class="input-group-addon"><b>观看状态</b></span>
+                        <input id="updateEpisodeModal_input_watchState" type="text" class="form-control" placeholder="选填">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <textarea id="updateEpisodeModal_textarea_introduce" class="form-control" rows="10" style="resize: none" placeholder="内容简介(选填)"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="updateEpisodeModal_button_submit" type="button" class="btn btn-primary">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

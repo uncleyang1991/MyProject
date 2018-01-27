@@ -1,0 +1,34 @@
+a {text-transform:none;text-decoration:none;}
+a:hover {text-decoration:underline}
+
+.main{
+    margin:30px auto;
+    width:1800px;
+}
+
+.episode-toolbar{
+    padding-top: 15px;
+}
+
+.episode-toolbar button{
+    float:left;
+    margin-left: 20px;
+}
+
+.episode-toolbar .form-group{
+    margin-left: 20px;
+}
+
+
+.content-div{
+    height: 850px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#episode_table tr:hover{
+    background: #c3e5f0;
+    cursor:pointer;
+}
+
