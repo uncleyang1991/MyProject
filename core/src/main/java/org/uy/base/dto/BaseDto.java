@@ -13,7 +13,7 @@ public class BaseDto implements Serializable{
     protected String id;
 
     //@JsonFormat(pattern = "yyyy年MM月dd日")
-    protected Timestamp createtime;
+    protected Timestamp createTime;
 
     public String getId() {
         return id;
@@ -23,11 +23,11 @@ public class BaseDto implements Serializable{
         this.id = id;
     }
 
-    public Timestamp getCreatetime() {
-        return createtime;
+    public Timestamp getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Timestamp createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 }
