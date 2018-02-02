@@ -21,4 +21,6 @@
 
     <import resource="spring-mybatis.xml"></import>
     <import resource="spring-episode.xml"></import>
+    <import resource="spring-movie.xml"></import>
+    <import resource="spring-animation.xml"></import>
 </beans>

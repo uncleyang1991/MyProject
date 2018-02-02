@@ -4,18 +4,18 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.uy.entity.EpisodeDto;
+import org.uy.entity.AnimationDto;
 import org.uy.tools.DateFormatTool;
 
 /**
  * 从豆瓣网上拉取剧集信息
  */
-public class EpisodeInfoPull {
+public class AnimationInfoPull {
 
     private String BASE_URL = "https://movie.douban.com/subject/";
 
-    public EpisodeDto getEpisodeInfo(String id) throws Exception{
-        EpisodeDto dto = new EpisodeDto();
+    public AnimationDto getAnimationInfo(String id) throws Exception{
+        AnimationDto dto = new AnimationDto();
 
         //开始抓取
         Document document = Jsoup.connect(BASE_URL+id).post();
@@ -59,15 +59,11 @@ public class EpisodeInfoPull {
         if(str.contains("制片国家/地区:")){
             String dramaType = str.substring(str.lastIndexOf("制片国家/地区:")+8,str.lastIndexOf("制片国家/地区:")+11).trim();
             if("日本".equals(dramaType)){
-                dto.setDramaType("日剧");
-            }else if("美国".equals(dramaType)){
-                dto.setDramaType("美剧");
+                dto.setDramaType("日漫");
             }else if("中国".equals(dramaType)){
-                dto.setDramaType("国产剧");
-            }else if("韩国".equals(dramaType)){
-                dto.setDramaType("韩剧");
-            }else if("英国".equals(dramaType)){
-                dto.setDramaType("英剧");
+                dto.setDramaType("国漫");
+            }else if("美国".equals(dramaType)){
+                dto.setDramaType("美漫");
             }
         }
 
@@ -111,7 +107,7 @@ public class EpisodeInfoPull {
 
     public static void main(String[] args) {
         try{
-            EpisodeDto e = new EpisodeInfoPull().getEpisodeInfo("2147121");
+            AnimationDto e = new AnimationInfoPull().getAnimationInfo("2147121");
             System.out.println(e.getPerformers());
         }catch(Exception e){
             e.printStackTrace();

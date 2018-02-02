@@ -1,6 +1,8 @@
 package org.uy.service;
 
 import org.springframework.stereotype.Service;
+import org.uy.base.page.PageParameter;
+import org.uy.base.page.PageResult;
 import org.uy.dao.EpisodeDao;
 import org.uy.entity.EpisodeDto;
 import org.uy.module.EpisodeInfoPull;
@@ -24,11 +26,13 @@ public class EpisodeServiceImpl implements EpisodeService {
     @Override
     public DataTablesResult<EpisodeDto> findEpisodeBySearchItem(Map<String, Object> item) {
         DataTablesResult<EpisodeDto> dataTablesResult = new DataTablesResult<EpisodeDto>();
-        int count = episodeDao.getEpisodeCountBySearchItem(item);
-        dataTablesResult.setRecordsTotal(count);
-        dataTablesResult.setRecordsFiltered(count);
-        List<EpisodeDto> data = episodeDao.findEpisodeBySearchItem(Integer.valueOf(item.get("start").toString()),Integer.valueOf(item.get("length").toString()),item);
-        dataTablesResult.setData(data);
+        PageParameter parameter = new PageParameter();
+        parameter.setPageSize(Integer.parseInt(item.get("length").toString()));
+        parameter.setPage(Integer.parseInt(item.get("start").toString())/Integer.parseInt(item.get("length").toString())+1);
+        PageResult<EpisodeDto> pageResult = episodeDao.findEpisodeBySearchItem(item,parameter);
+        dataTablesResult.setRecordsTotal(pageResult.getTotalRow());
+        dataTablesResult.setRecordsFiltered(pageResult.getTotalRow());
+        dataTablesResult.setData(pageResult);
         return dataTablesResult;
     }
 

@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.uy.dao.EpisodeDao">
+<mapper namespace="org.uy.dao.AnimationDao">
 
-    <select id="findEpisodeBySearchItem" resultMap="episodeMap" parameterType="map">
+    <select id="findAnimationBySearchItem" resultMap="animationMap" parameterType="map">
         select
           id,name,type,drama_type,total,writer,performers,is_end,show_time,watch_time,watch_state,level
         from
-          episode
+          animation
         where
           1=1
         <if test="item.name != null and item.name != ''">
@@ -38,29 +38,29 @@
             <if test="item.seasonSeason == '所有'">
               and show_time between str_to_date(concat(#{item.seasonYear},'-01-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-12-31'), '%Y-%m-%d')
             </if>
-            <if test="item.seasonSeason == '春季'">
+            <if test="item.seasonSeason == '4月番'">
                 and show_time between str_to_date(concat(#{item.seasonYear},'-04-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-06-30'), '%Y-%m-%d')
             </if>
-            <if test="item.seasonSeason == '夏季'">
+            <if test="item.seasonSeason == '7月番'">
                 and show_time between str_to_date(concat(#{item.seasonYear},'-07-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-09-30'), '%Y-%m-%d')
             </if>
-            <if test="item.seasonSeason == '秋季'">
+            <if test="item.seasonSeason == '10月番'">
                 and show_time between str_to_date(concat(#{item.seasonYear},'-10-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-12-31'), '%Y-%m-%d')
             </if>
-            <if test="item.seasonSeason == '冬季'">
+            <if test="item.seasonSeason == '1月番'">
                 and show_time between str_to_date(concat(#{item.seasonYear},'-01-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-03-31'), '%Y-%m-%d')
             </if>
         </if>
-		order by case when watch_state = '已看完' then 0 else 1 end desc,create_time desc
+        order by case when watch_state = '已看完' then 0 else 1 end desc,create_time desc
     </select>
 
-    <insert id="add" parameterType="org.uy.entity.EpisodeDto">
-        insert into episode(id,name,type,total,drama_type,writer,performers,is_end,show_time,watch_time,watch_state,level,introduce,create_time)
+    <insert id="add" parameterType="org.uy.entity.AnimationDto">
+        insert into animation(id,name,type,total,drama_type,writer,performers,is_end,show_time,watch_time,watch_state,level,introduce,create_time)
           values(#{obj.id},#{obj.name},#{obj.type},#{obj.total},#{obj.dramaType},#{obj.writer},#{obj.performers},#{obj.isEnd},#{obj.showTime},#{obj.watchTime},#{obj.watchState},#{obj.level},#{obj.introduce},now())
     </insert>
 
-    <update id="update" parameterType="org.uy.entity.EpisodeDto">
-        update episode set
+    <update id="update" parameterType="org.uy.entity.AnimationDto">
+        update animation set
           name = #{obj.name},
           type = #{obj.type},
           total = #{obj.total},
@@ -77,16 +77,16 @@
           id = #{obj.id}
     </update>
 
-    <select id="findEpisodeById" resultMap="episodeMap" parameterType="java.lang.String">
+    <select id="findAnimationById" resultMap="animationMap" parameterType="java.lang.String">
         select
           *
         from
-          episode
+          animation
         where
           id = #{id}
     </select>
 
-    <resultMap type="org.uy.entity.EpisodeDto" id="episodeMap">
+    <resultMap type="org.uy.entity.AnimationDto" id="animationMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="type" column="type"/>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影</title>
+    <link rel="stylesheet" href="css/movie.css">
+</head>
+<body>
+
+    <div class="movie-toolbar">
+        <button type="button" title="添加新电影" class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#addMovieModal"></button>
+        <button id="movie_button_clear_item" type="button" title="清除条件" class="btn btn-info">清除条件</button>
+        <button id="movie_button_search" type="button" title="按查询条件搜索" class="btn btn-primary glyphicon glyphicon-search"></button>
+
+        <form id="movie_form_search_item" class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><b>电影名</b></span>
+                    <input id="movie_input_search_item_name" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group col-xs-7">
+                    <span class="input-group-addon"><b>剧情类型</b></span>
+                    <input id="movie_input_search_item_type" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:-95px;">
+                <div class="input-group">
+                    <span class="input-group-addon"><b>地　区</b></span>
+                    <input id="movie_input_search_item_region" type="text" class="form-control" style="width:80px;">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group col-xs-10">
+                    <span class="input-group-addon"><b>导　演</b></span>
+                    <input id="movie_input_search_item_director" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:-25px;">
+                <div class="input-group col-xs-10">
+                    <span class="input-group-addon"><b>演　员</b></span>
+                    <input id="movie_input_search_item_performers" type="text" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+    <table id="movie_table" class="table">
+        <thead>
+        <th>片　名</th>
+        <th>剧情类型</th>
+        <th>地　区</th>
+        <th>导　演</th>
+        <th>演　员</th>
+        <th>时　长</th>
+        <th>上映时间</th>
+        <th>观看时间</th>
+        <th>星　级</th>
+        <th></th>
+        </thead>
+    </table>
+
+    <!-- 添加剧集模态框 -->
+    <div class="modal fade" id="addMovieModal" role="dialog" aria-labelledby="addMovieModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="addMovieModalLabel">添加新电影</h4>
+                </div>
+                <form id="movie_form_add_movie">
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>片　　名</b></span>
+                            <input id="addMovieModal_input_name" type="text" class="form-control" placeholder="必填">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>剧情类型</b></span>
+                            <input id="addMovieModal_input_type" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔" style="width:277px;">
+                            <span class="input-group-addon"><b>时　　长</b></span>
+                            <input id="addMovieModal_input_duration" type="text" class="form-control" placeholder="必填" style="width:75px;">
+                            <span class="input-group-addon"><b>分钟</b></span>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>导　　演</b></span>
+                            <input id="addMovieModal_input_director" type="text" class="form-control" placeholder="选填">
+                            <span class="input-group-addon"><b>地　　区</b></span>
+                            <input id="addMovieModal_input_region" type="text" class="form-control" placeholder="选填" style="width:100px;">
+                            <span class="input-group-addon"><b>星　　级</b></span>
+                            <select id="addMovieModal_select_level" class="form-control" style="width:80px;">
+                                <option value="1">一星</option>
+                                <option value="2">二星</option>
+                                <option value="3">三星</option>
+                                <option value="4">四星</option>
+                                <option value="5">五星</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>演　　员</b></span>
+                            <input id="addMovieModal_input_performers" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>上映时间</b></span>
+                            <input id="addMovieModal_input_showTime" type="text" class="form-control" placeholder="选填" readonly>
+                            <span class="input-group-addon"><b>观看时间</b></span>
+                            <input id="addMovieModal_input_watchTime" type="text" class="form-control" placeholder="选填" readonly>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <textarea id="addMovieModal_textarea_introduce" class="form-control" rows="10" style="resize: none" placeholder="内容简介(选填)"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button id="addMovieModal_button_clear" type="button" class="btn btn-default">清除</button>
+                    <button id="addMovieModal_button_sync" type="button" class="btn btn-success">同步</button>
+                    <button id="addMovieModal_button_submit" type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 更新剧集模态框 -->
+    <div class="modal fade" id="updateMovieModal" role="dialog" aria-labelledby="updateMovieModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <input type="hidden" id="updateMovieModal_input_id">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="updateMovieModalLabel">更新电影信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>片　　名</b></span>
+                        <input id="updateMovieModal_input_name" type="text" class="form-control" placeholder="必填">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>剧情类型</b></span>
+                        <input id="updateMovieModal_input_type" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔" style="width:285px;">
+                        <span class="input-group-addon"><b>时　　长</b></span>
+                        <input id="updateMovieModal_input_duration" type="text" class="form-control" placeholder="必填" style="width:81px;">
+                        <span class="input-group-addon"><b>分</b></span>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>导　　演</b></span>
+                        <input id="updateMovieModal_input_director" type="text" class="form-control" placeholder="选填">
+                        <span class="input-group-addon"><b>地　　区</b></span>
+                        <input id="updateMovieModal_input_region" type="text" class="form-control" placeholder="选填" style="width:100px;">
+                        <span class="input-group-addon"><b>星　　级</b></span>
+                        <select id="updateMovieModal_select_level" class="form-control" style="width:80px;">
+                            <option value="1">一星</option>
+                            <option value="2">二星</option>
+                            <option value="3">三星</option>
+                            <option value="4">四星</option>
+                            <option value="5">五星</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>演　　员</b></span>
+                        <input id="updateMovieModal_input_performers" type="text" class="form-control" placeholder="必填，多个按英文逗号分隔">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>上映时间</b></span>
+                        <input id="updateMovieModal_input_showTime" type="text" class="form-control" placeholder="选填" readonly>
+                        <span class="input-group-addon"><b>观看时间</b></span>
+                        <input id="updateMovieModal_input_watchTime" type="text" class="form-control" placeholder="选填" readonly>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <textarea id="updateMovieModal_textarea_introduce" class="form-control" rows="10" style="resize: none" placeholder="内容简介(选填)"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="updateMovieModal_button_submit" type="button" class="btn btn-primary">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/movie.js"></script>
+</body>
+</html>

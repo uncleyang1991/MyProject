@@ -1,0 +1,18 @@
+.movie-toolbar{
+    padding-top: 15px;
+}
+
+.movie-toolbar button{
+    float:left;
+    margin-left: 20px;
+}
+
+.movie-toolbar .form-group{
+    margin-left: 20px;
+}
+
+#movie_table tr:hover{
+    background: #c3e5f0;
+    cursor:pointer;
+}
+
