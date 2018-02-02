@@ -1,11 +1,14 @@
 package org.uy.interceptors;
 
+import org.apache.ibatis.binding.BindingException;
 import org.apache.ibatis.executor.resultset.ResultSetHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
+import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
+import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import org.uy.base.page.PageParameter;
 import org.uy.base.page.PageResult;
 
@@ -35,8 +38,14 @@ public class MyBatisPageInterceptor implements Interceptor {
         if(invocation.getTarget() instanceof StatementHandler){
             StatementHandler statement = (StatementHandler)invocation.getTarget();
             MetaObject metaStatementHandler = SystemMetaObject.forObject(statement);
+            MappedStatement mappedStatement = (MappedStatement)metaStatementHandler.getValue("delegate.mappedStatement");
             BoundSql boundSql = (BoundSql) metaStatementHandler.getValue("delegate.boundSql");
-            PageParameter parameter = (PageParameter)boundSql.getParameterObject();
+            PageParameter parameter;
+            try{
+                parameter = (PageParameter)metaStatementHandler.getValue("delegate.boundSql.parameterObject.pageParameter");
+            }catch(BindingException be){
+                parameter = null;
+            }
             if(parameter==null){
                 return invocation.proceed();
             }
@@ -48,6 +57,7 @@ public class MyBatisPageInterceptor implements Interceptor {
             try {
                 connection = (Connection)invocation.getArgs()[0];
                 pstm = connection.prepareStatement(buildCountSql(boundSql.getSql()));
+                new DefaultParameterHandler(mappedStatement,boundSql.getParameterObject(),boundSql).setParameters(pstm);
                 result = pstm.executeQuery();
                 if(result.next()){
                     totalRow = result.getInt(1);
