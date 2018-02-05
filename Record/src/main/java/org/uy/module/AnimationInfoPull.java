@@ -8,7 +8,7 @@ import org.uy.entity.AnimationDto;
 import org.uy.tools.DateFormatTool;
 
 /**
- * 从豆瓣网上拉取剧集信息
+ * 从豆瓣网上拉取动画信息
  */
 public class AnimationInfoPull {
 
@@ -21,7 +21,7 @@ public class AnimationInfoPull {
         Document document = Jsoup.connect(BASE_URL+id).post();
         Document celDoc = Jsoup.connect(BASE_URL+id+"/celebrities").post();
 
-        //剧名
+        //名称
         String name = celDoc.title();
         name = name.substring(0,name.lastIndexOf(" 全部影人"));
         dto.setName(name.trim());
@@ -67,7 +67,7 @@ public class AnimationInfoPull {
             }
         }
 
-        //演员
+        //声优
         StringBuilder performers = new StringBuilder();
         for(Element h2:celDoc.getElementsByTag("h2")){
             if("演员 Actor/Actress".equals(h2.text())){

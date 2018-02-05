@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据统计</title>
+    <link rel="stylesheet" href="css/statistics.css">
+    <script src="js/base/echarts.min.js"></script>
+</head>
+<body>
+    <div class="statistics_div">
+        <form class="form-inline" style="margin-left: 25px;padding-top: 10px; margin-bottom: -20px;">
+            <div id="total_count_div" class="form-group">
+                <div class="input-group">
+                    <ol class="breadcrumb" style="margin-top: 20px;">
+
+                    </ol>
+                </div>
+            </div>
+            <div id="watch_state_div" class="form-group">
+                <div class="input-group">
+                    <ol class="breadcrumb" style="margin-top: 20px;">
+
+                    </ol>
+                </div>
+            </div>
+            <div class="form-group" style="float:right;margin-top:20px;margin-right: 25px;">
+                <div class="input-group">
+                    <button type="button" id="refresh_btn" title="刷新图表" class="btn btn-primary glyphicon glyphicon-refresh"></button>
+                </div>
+            </div>
+        </form>
+
+        <div class="form-group col-xs-5" style="position:absolute;top:160px;left:625px;">
+            <div class="input-group col-xs-3">
+                <span class="input-group-addon"><b>选择年份:</b></span>
+                <input id="watch_time_year_input" type="text" class="form-control" readonly>
+                <span class="input-group-addon"><b>年</b></span>
+            </div>
+        </div>
+
+        <div id="watch_time_trend_div">
+
+        </div>
+        <div id="episode_type_top_div">
+
+        </div>
+        <div id="movie_type_top_div">
+
+        </div>
+        <div id="animation_type_top_div">
+
+        </div>
+        <div class="left_bottom_div">
+            <div id="episode_drama_type_pie_div">
+
+            </div>
+            <div id="movie_region_pie_div">
+
+            </div>
+            <div id="animation_drama_type_pie_div">
+
+            </div>
+            <div id="level_radar_div">
+
+            </div>
+            <div id="operation_div">
+                <!--<h4><strong>操作记录</strong></h4>-->
+                <table id="operation_table"></table>
+            </div>
+            <div class="clear_float_left"></div>
+        </div>
+        <div id="episode_performers_top_div">
+
+        </div>
+        <div id="movie_performers_top_div">
+
+        </div>
+        <div id="animation_performers_top_div">
+
+        </div>
+        <!--<div class="clear_float_left"></div>-->
+    </div>
+    <script src="js/statistics.js"></script>
+</body>
+</html>

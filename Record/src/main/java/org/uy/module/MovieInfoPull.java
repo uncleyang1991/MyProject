@@ -10,7 +10,7 @@ import org.uy.tools.DateFormatTool;
 import java.text.DateFormat;
 
 /**
- * 从豆瓣网上拉取剧集信息
+ * 从豆瓣网上拉取电影信息
  */
 public class MovieInfoPull {
 

@@ -1,0 +1,111 @@
+.statistics_div > div{
+    float:left;
+}
+
+#top_info_div{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#watch_time_trend_div{
+    height: 300px;
+    width: 800px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#episode_type_top_div{
+    height: 300px;
+    width: 320px;
+    padding-top: 20px;
+}
+
+#movie_type_top_div{
+     height: 300px;
+     width: 320px;
+     padding-top: 20px;
+     margin-left: 10px;
+ }
+
+#animation_type_top_div{
+    height: 300px;
+    width: 320px;
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+#episode_performers_top_div{
+    height: 480px;
+    width: 320px;
+    padding-top: 20px;
+}
+
+#movie_performers_top_div{
+    height: 480px;
+    width: 320px;
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+#animation_performers_top_div{
+    height: 480px;
+    width: 320px;
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+.left_bottom_div{
+    height: 480px;
+    width: 800px;
+}
+
+.left_bottom_div>div{
+    float:left;
+}
+
+#episode_drama_type_pie_div{
+    height: 250px;
+    width: 240px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+#movie_region_pie_div{
+    height: 250px;
+    width: 240px;
+    padding-top: 10px;
+}
+
+#animation_drama_type_pie_div{
+    height: 250px;
+    width: 240px;
+    padding-top: 10px;
+}
+
+#level_radar_div{
+    width:300px;
+    height: 240px;
+    margin-left: 20px;
+}
+
+#operation_div{
+    height: 230px;width: 480px;
+    margin-top: -15px;
+}
+
+#operation_div>h4{
+    margin-top: 5px;
+}
+
+#operation_table tr:hover{
+    background: #c3e5f0;
+    cursor:pointer;
+}
+
+#watch_state_div{
+    margin-left: 20px;
+}
+
+.clear_float_left{
+    clear: left;
+}

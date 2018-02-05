@@ -1,10 +1,13 @@
 package org.uy.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.uy.base.page.PageParameter;
 import org.uy.base.page.PageResult;
 import org.uy.dao.AnimationDao;
+import org.uy.dao.OperationDao;
 import org.uy.entity.AnimationDto;
+import org.uy.entity.OperationDto;
 import org.uy.module.AnimationInfoPull;
 import org.uy.page.DataTablesResult;
 import org.uy.tools.DateFormatTool;
@@ -18,9 +21,12 @@ public class AnimationServiceImpl implements AnimationService {
 
     @Resource()
     private AnimationDao animationDao;
+    
+    @Resource
+    private OperationDao operationDao;
 
     @Resource
-    private AnimationInfoPull eip;
+    private AnimationInfoPull aip;
 
     @Override
     public DataTablesResult<AnimationDto> findAnimationBySearchItem(Map<String, Object> item) {
@@ -36,11 +42,12 @@ public class AnimationServiceImpl implements AnimationService {
     }
 
     @Override
+    @Transactional
     public boolean addAnimation(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
         AnimationDto animation = mapToAnimation(params);
-        int result = animationDao.add(animation);
-        return result == 1;
+        int result = animationDao.add(animation)+operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),"add"));
+        return result == 2;
     }
 
     @Override
@@ -49,15 +56,16 @@ public class AnimationServiceImpl implements AnimationService {
     }
 
     @Override
+    @Transactional
     public boolean updateAnimation(Map<String, Object> params) {
         AnimationDto animation = mapToAnimation(params);
-        int result = animationDao.update(animation);
-        return result == 1;
+        int result = animationDao.update(animation)+operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),"update"));
+        return result == 2;
     }
 
     @Override
     public AnimationDto animationInfoPull(String id) throws Exception{
-        return eip.getAnimationInfo(id);
+        return aip.getAnimationInfo(id);
     }
 
     /**
@@ -93,4 +101,11 @@ public class AnimationServiceImpl implements AnimationService {
         this.animationDao = animationDao;
     }
 
+    public void setOperationDao(OperationDao operationDao) {
+        this.operationDao = operationDao;
+    }
+
+    public void setAip(AnimationInfoPull aip) {
+        this.aip = aip;
+    }
 }

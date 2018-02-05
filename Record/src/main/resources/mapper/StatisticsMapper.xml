@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.uy.dao.StatisticsDao">
+
+    <select id="watchTimeTrend" parameterType="java.lang.String" resultType="map">
+        select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'剧集' as type
+        from
+          (select * from episode where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+        group by DATE_FORMAT(watch_time,'%Y-%m')
+          union
+        select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'电影' as type
+        from
+          (select * from movie where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+        group by DATE_FORMAT(watch_time,'%Y-%m')
+          union
+        select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'动漫' as type
+        from
+          (select * from animation where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+        group by DATE_FORMAT(watch_time,'%Y-%m')
+    </select>
+
+    <select id="episodeTypeTop" resultType="map">
+        select c.type,count(1) as count from (
+        select substring_index(substring_index(a.type,',',b.help_topic_id+1),',',-1) as type
+        from
+        episode a
+        join
+        mysql.help_topic b
+        on b.help_topic_id &lt; (length(a.type) - length(replace(a.type,',',''))+1)
+        ) c GROUP BY c.type
+        order by count desc limit 5
+    </select>
+
+    <select id="movieTypeTop" resultType="map">
+        select c.type,count(1) as count from (
+        select substring_index(substring_index(a.type,',',b.help_topic_id+1),',',-1) as type
+        from
+        movie a
+        join
+        mysql.help_topic b
+        on b.help_topic_id &lt; (length(a.type) - length(replace(a.type,',',''))+1)
+        ) c GROUP BY c.type
+        order by count desc limit 5
+    </select>
+
+    <select id="animationTypeTop" resultType="map">
+        select c.type,count(1) as count from (
+        select substring_index(substring_index(a.type,',',b.help_topic_id+1),',',-1) as type
+        from
+        animation a
+        join
+        mysql.help_topic b
+        on b.help_topic_id &lt; (length(a.type) - length(replace(a.type,',',''))+1)
+        ) c GROUP BY c.type
+        order by count desc limit 5
+    </select>
+
+    <select id="totalCount" resultType="map">
+        select
+          (select count(1) from episode) as episode,
+          (select count(1) from episode where watch_state != '已看完') as _episode,
+          (select count(1) from movie) as movie,
+          (select count(1) from animation) as animation,
+          (select count(1) from animation where watch_state != '已看完') as _animation
+    </select>
+
+    <select id="episodePerformersTop" resultType="map">
+        select c.name,count(1) as count 
+          from (
+            select substring_index(substring_index(a.performers,',',b.help_topic_id+1),',',-1) as name
+            from
+            episode a
+            join
+            mysql.help_topic b
+            on b.help_topic_id &lt;(length(a.performers) - length(replace(a.performers,',',''))+1)
+          ) c 
+        group by c.name having c.name != '' order by count desc limit 10
+    </select>
+
+    <select id="moviePerformersTop" resultType="map">
+        select c.name,count(1) as count
+        from (
+        select substring_index(substring_index(a.performers,',',b.help_topic_id+1),',',-1) as name
+        from
+        movie a
+        join
+        mysql.help_topic b
+        on b.help_topic_id &lt;(length(a.performers) - length(replace(a.performers,',',''))+1)
+        ) c
+        group by c.name having c.name != '' order by count desc limit 10
+    </select>
+
+    <select id="animationPerformersTop" resultType="map">
+        select c.name,count(1) as count
+        from (
+        select substring_index(substring_index(a.performers,',',b.help_topic_id+1),',',-1) as name
+        from
+        animation a
+        join
+        mysql.help_topic b
+        on b.help_topic_id &lt;(length(a.performers) - length(replace(a.performers,',',''))+1)
+        ) c
+        group by c.name having c.name != '' order by count desc limit 10
+    </select>
+
+    <select id="episodeDramaTypePie" resultType="map">
+        select 
+          drama_type,count(1) as count 
+        from 
+          episode 
+        group by 
+          drama_type
+    </select>
+
+    <select id="movieRegionPie" resultType="map">
+        select
+          region,count(1) as count
+        from
+          movie
+        group by
+          region
+    </select>
+
+    <select id="animationDramaTypePie" resultType="map">
+        select
+          drama_type,count(1) as count
+        from
+          animation
+        group by
+          drama_type
+    </select>
+
+    <select id="levelRadar" resultType="map">
+        select level,count(1) as count,'剧集' as type from episode group by level
+        union
+        select level,count(1) as count,'电影' as type from movie group by level
+        union
+        select level,count(1) as count,'动漫' as type from animation group by level
+    </select>
+</mapper>

@@ -1,10 +1,13 @@
 package org.uy.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.uy.base.page.PageParameter;
 import org.uy.base.page.PageResult;
 import org.uy.dao.EpisodeDao;
+import org.uy.dao.OperationDao;
 import org.uy.entity.EpisodeDto;
+import org.uy.entity.OperationDto;
 import org.uy.module.EpisodeInfoPull;
 import org.uy.page.DataTablesResult;
 import org.uy.tools.DateFormatTool;
@@ -19,6 +22,9 @@ public class EpisodeServiceImpl implements EpisodeService {
 
     @Resource()
     private EpisodeDao episodeDao;
+
+    @Resource
+    private OperationDao operationDao;
 
     @Resource
     private EpisodeInfoPull eip;
@@ -37,11 +43,12 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
+    @Transactional
     public boolean addEpisode(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
         EpisodeDto episode = mapToEpisode(params);
-        int result = episodeDao.add(episode);
-        return result == 1;
+        int result = episodeDao.add(episode)+operationDao.add(new OperationDto(IdTool.getUUID(),"剧集",episode.getName(),"add"));
+        return result == 2;
     }
 
     @Override
@@ -50,10 +57,11 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
+    @Transactional
     public boolean updateEpisode(Map<String, Object> params) {
         EpisodeDto episode = mapToEpisode(params);
-        int result = episodeDao.update(episode);
-        return result == 1;
+        int result = episodeDao.update(episode)+operationDao.add(new OperationDto(IdTool.getUUID(),"剧集",episode.getName(),"update"));
+        return result == 2;
     }
 
     @Override
@@ -92,6 +100,14 @@ public class EpisodeServiceImpl implements EpisodeService {
 
     public void setEpisodeDao(EpisodeDao episodeDao) {
         this.episodeDao = episodeDao;
+    }
+
+    public void setOperationDao(OperationDao operationDao) {
+        this.operationDao = operationDao;
+    }
+
+    public void setEip(EpisodeInfoPull eip) {
+        this.eip = eip;
     }
 
 }

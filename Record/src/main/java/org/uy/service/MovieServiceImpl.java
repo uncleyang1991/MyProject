@@ -1,10 +1,13 @@
 package org.uy.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.uy.base.page.PageParameter;
 import org.uy.base.page.PageResult;
 import org.uy.dao.MovieDao;
+import org.uy.dao.OperationDao;
 import org.uy.entity.MovieDto;
+import org.uy.entity.OperationDto;
 import org.uy.module.MovieInfoPull;
 import org.uy.page.DataTablesResult;
 import org.uy.tools.DateFormatTool;
@@ -18,6 +21,9 @@ public class MovieServiceImpl implements MovieService {
 
     @Resource()
     private MovieDao movieDao;
+
+    @Resource
+    private OperationDao operationDao;
 
     @Resource
     private MovieInfoPull mip;
@@ -36,14 +42,16 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    @Transactional
     public boolean addMovie(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
         MovieDto movie = mapToMovie(params);
-        int result = movieDao.add(movie);
-        return result == 1;
+        int result = movieDao.add(movie)+operationDao.add(new OperationDto(IdTool.getUUID(),"电影",movie.getName(),"add"));
+        return result == 2;
     }
 
     @Override
+    @Transactional
     public MovieDto findMovieById(String id) {
         return movieDao.findMovieById(id);
     }
@@ -51,8 +59,8 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public boolean updateMovie(Map<String, Object> params) {
         MovieDto movie = mapToMovie(params);
-        int result = movieDao.update(movie);
-        return result == 1;
+        int result = movieDao.update(movie)+operationDao.add(new OperationDto(IdTool.getUUID(),"电影",movie.getName(),"update"));
+        return result == 2;
     }
 
     @Override
@@ -91,4 +99,11 @@ public class MovieServiceImpl implements MovieService {
         this.movieDao = movieDao;
     }
 
+    public void setOperationDao(OperationDao operationDao) {
+        this.operationDao = operationDao;
+    }
+
+    public void setMip(MovieInfoPull mip) {
+        this.mip = mip;
+    }
 }

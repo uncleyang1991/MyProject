@@ -23,4 +23,6 @@
     <import resource="spring-episode.xml"></import>
     <import resource="spring-movie.xml"></import>
     <import resource="spring-animation.xml"></import>
+    <import resource="spring-statistics.xml"></import>
+    <import resource="spring-operation.xml"></import>
 </beans>
