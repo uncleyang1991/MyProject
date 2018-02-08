@@ -7,14 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
-        <module name="MyProject" />
+        <module name="jumper-assistant" />
+        <module name="Record" />
+        <module name="record" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="core" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="jumper-assistant" target="1.5" />
       <module name="MyProject" target="1.5" />
-      <module name="test" target="1.5" />
-      <module name="test1" target="1.5" />
+      <module name="record" target="1.8" />
+      <module name="Record" target="1.6" />
+      <module name="Record2" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,7 +6,12 @@
 
     <groupId>org.uy</groupId>
     <artifactId>MyProject</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>d1</module>
+        <module>jumper-assistant</module>
+    </modules>
 
 
 </project>
