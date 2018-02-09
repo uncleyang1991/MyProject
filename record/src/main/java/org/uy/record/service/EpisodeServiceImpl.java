@@ -1,17 +1,14 @@
 package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.uy.record.dao.EpisodeDao;
-import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.EpisodeDto;
-import org.uy.record.entity.OperationDto;
 import org.uy.record.module.EpisodeInfoPull;
 import org.uy.record.page.DataTablesResult;
 import org.uy.record.page.PageParameter;
 import org.uy.record.page.PageResult;
-import org.uy.record.tools.DateFormatTool;
 import org.uy.record.tools.IdTool;
+import org.uy.record.tools.MapTool;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -21,9 +18,6 @@ public class EpisodeServiceImpl implements EpisodeService {
 
     @Resource()
     private EpisodeDao episodeDao;
-
-    @Resource
-    private OperationDao operationDao;
 
     @Resource
     private EpisodeInfoPull eip;
@@ -42,12 +36,11 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
-    @Transactional
     public boolean addEpisode(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
-        EpisodeDto episode = mapToEpisode(params);
-        int result = episodeDao.add(episode)+operationDao.add(new OperationDto(IdTool.getUUID(),"剧集",episode.getName(),"add"));
-        return result == 2;
+        EpisodeDto episode = MapTool.mapToEpisode(params);
+        int result = episodeDao.add(episode);
+        return result == 1;
     }
 
     @Override
@@ -56,11 +49,10 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
-    @Transactional
     public boolean updateEpisode(Map<String, Object> params) {
-        EpisodeDto episode = mapToEpisode(params);
-        int result = episodeDao.update(episode)+operationDao.add(new OperationDto(IdTool.getUUID(),"剧集",episode.getName(),"update"));
-        return result == 2;
+        EpisodeDto episode = MapTool.mapToEpisode(params);
+        int result = episodeDao.update(episode);
+        return result == 1;
     }
 
     @Override
@@ -68,41 +60,8 @@ public class EpisodeServiceImpl implements EpisodeService {
         return eip.getEpisodeInfo(id);
     }
 
-    /**
-     * map转换为EpisodeDto
-     * @param params
-     * @return
-     */
-    private EpisodeDto mapToEpisode(Map<String, Object> params){
-        EpisodeDto episode = new EpisodeDto();
-        episode.setId(params.get("id").toString());
-        episode.setName(params.get("name").toString());
-        episode.setType(params.get("type").toString());
-        episode.setTotal(Integer.parseInt(params.get("total").toString()));
-        episode.setDramaType(params.get("dramaType").toString());
-        episode.setIntroduce(params.get("introduce").toString());
-        episode.setIsEnd(params.get("state").toString());
-        episode.setLevel(Integer.parseInt(params.get("level").toString()));
-        episode.setPerformers(params.get("performers").toString());
-        episode.setWriter(params.get("writer").toString());
-        episode.setWatchState(params.get("watchState").toString());
-        String showTime = params.get("showTime").toString();
-        if(!"".equals(showTime)){
-            episode.setShowTime(DateFormatTool.strToDate(null,showTime));
-        }
-        String watchTime = params.get("watchTime").toString();
-        if(!"".equals(watchTime)){
-            episode.setWatchTime(DateFormatTool.strToDate(null,watchTime));
-        }
-        return episode;
-    }
-
     public void setEpisodeDao(EpisodeDao episodeDao) {
         this.episodeDao = episodeDao;
-    }
-
-    public void setOperationDao(OperationDao operationDao) {
-        this.operationDao = operationDao;
     }
 
     public void setEip(EpisodeInfoPull eip) {

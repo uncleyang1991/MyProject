@@ -1,17 +1,14 @@
 package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.uy.record.dao.MovieDao;
-import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.MovieDto;
-import org.uy.record.entity.OperationDto;
 import org.uy.record.module.MovieInfoPull;
 import org.uy.record.page.DataTablesResult;
 import org.uy.record.page.PageParameter;
 import org.uy.record.page.PageResult;
-import org.uy.record.tools.DateFormatTool;
 import org.uy.record.tools.IdTool;
+import org.uy.record.tools.MapTool;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -21,9 +18,6 @@ public class MovieServiceImpl implements MovieService {
 
     @Resource
     private MovieDao movieDao;
-
-    @Resource
-    private OperationDao operationDao;
 
     @Resource
     private MovieInfoPull mip;
@@ -42,25 +36,23 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    @Transactional
     public boolean addMovie(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
-        MovieDto movie = mapToMovie(params);
-        int result = movieDao.add(movie)+operationDao.add(new OperationDto(IdTool.getUUID(),"电影",movie.getName(),"add"));
-        return result == 2;
+        MovieDto movie = MapTool.mapToMovie(params);
+        int result = movieDao.add(movie);
+        return result == 1;
     }
 
     @Override
-    @Transactional
     public MovieDto findMovieById(String id) {
         return movieDao.findMovieById(id);
     }
 
     @Override
     public boolean updateMovie(Map<String, Object> params) {
-        MovieDto movie = mapToMovie(params);
-        int result = movieDao.update(movie)+operationDao.add(new OperationDto(IdTool.getUUID(),"电影",movie.getName(),"update"));
-        return result == 2;
+        MovieDto movie = MapTool.mapToMovie(params);
+        int result = movieDao.update(movie);
+        return result == 1;
     }
 
     @Override
@@ -68,39 +60,8 @@ public class MovieServiceImpl implements MovieService {
         return mip.getMovieInfo(id);
     }
 
-    /**
-     * map转换为MovieDto
-     * @param params
-     * @return
-     */
-    private MovieDto mapToMovie(Map<String, Object> params){
-        MovieDto movie = new MovieDto();
-        movie.setId(params.get("id").toString());
-        movie.setName(params.get("name").toString());
-        movie.setType(params.get("type").toString());
-        movie.setDuration(Integer.parseInt(params.get("duration").toString()));
-        movie.setRegion(params.get("region").toString());
-        movie.setIntroduce(params.get("introduce").toString());
-        movie.setLevel(Integer.parseInt(params.get("level").toString()));
-        movie.setPerformers(params.get("performers").toString());
-        movie.setDirector(params.get("director").toString());
-        String showTime = params.get("showTime").toString();
-        if(!"".equals(showTime)){
-            movie.setShowTime(DateFormatTool.strToDate(null,showTime));
-        }
-        String watchTime = params.get("watchTime").toString();
-        if(!"".equals(watchTime)){
-            movie.setWatchTime(DateFormatTool.strToDate(null,watchTime));
-        }
-        return movie;
-    }
-
     public void setMovieDao(MovieDao movieDao) {
         this.movieDao = movieDao;
-    }
-
-    public void setOperationDao(OperationDao operationDao) {
-        this.operationDao = operationDao;
     }
 
     public void setMip(MovieInfoPull mip) {

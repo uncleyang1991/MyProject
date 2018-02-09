@@ -1,17 +1,15 @@
 package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.uy.record.dao.AnimationDao;
 import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.AnimationDto;
-import org.uy.record.entity.OperationDto;
 import org.uy.record.module.AnimationInfoPull;
 import org.uy.record.page.DataTablesResult;
 import org.uy.record.page.PageParameter;
 import org.uy.record.page.PageResult;
-import org.uy.record.tools.DateFormatTool;
 import org.uy.record.tools.IdTool;
+import org.uy.record.tools.MapTool;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -21,9 +19,6 @@ public class AnimationServiceImpl implements AnimationService {
 
     @Resource()
     private AnimationDao animationDao;
-    
-    @Resource
-    private OperationDao operationDao;
 
     @Resource
     private AnimationInfoPull aip;
@@ -42,12 +37,11 @@ public class AnimationServiceImpl implements AnimationService {
     }
 
     @Override
-    @Transactional
     public boolean addAnimation(Map<String,Object> params) {
         params.put("id", IdTool.getUUID());
-        AnimationDto animation = mapToAnimation(params);
-        int result = animationDao.add(animation)+operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),"add"));
-        return result == 2;
+        AnimationDto animation = MapTool.mapToAnimation(params);
+        int result = animationDao.add(animation);
+        return result == 1;
     }
 
     @Override
@@ -56,11 +50,10 @@ public class AnimationServiceImpl implements AnimationService {
     }
 
     @Override
-    @Transactional
     public boolean updateAnimation(Map<String, Object> params) {
-        AnimationDto animation = mapToAnimation(params);
-        int result = animationDao.update(animation)+operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),"update"));
-        return result == 2;
+        AnimationDto animation = MapTool.mapToAnimation(params);
+        int result = animationDao.update(animation);
+        return result == 1;
     }
 
     @Override
@@ -68,41 +61,8 @@ public class AnimationServiceImpl implements AnimationService {
         return aip.getAnimationInfo(id);
     }
 
-    /**
-     * map转换为AnimationDto
-     * @param params
-     * @return
-     */
-    private AnimationDto mapToAnimation(Map<String, Object> params){
-        AnimationDto animation = new AnimationDto();
-        animation.setId(params.get("id").toString());
-        animation.setName(params.get("name").toString());
-        animation.setType(params.get("type").toString());
-        animation.setTotal(Integer.parseInt(params.get("total").toString()));
-        animation.setDramaType(params.get("dramaType").toString());
-        animation.setIntroduce(params.get("introduce").toString());
-        animation.setIsEnd(params.get("state").toString());
-        animation.setLevel(Integer.parseInt(params.get("level").toString()));
-        animation.setPerformers(params.get("performers").toString());
-        animation.setWriter(params.get("writer").toString());
-        animation.setWatchState(params.get("watchState").toString());
-        String showTime = params.get("showTime").toString();
-        if(!"".equals(showTime)){
-            animation.setShowTime(DateFormatTool.strToDate(null,showTime));
-        }
-        String watchTime = params.get("watchTime").toString();
-        if(!"".equals(watchTime)){
-            animation.setWatchTime(DateFormatTool.strToDate(null,watchTime));
-        }
-        return animation;
-    }
-
     public void setAnimationDao(AnimationDao animationDao) {
         this.animationDao = animationDao;
-    }
-
-    public void setOperationDao(OperationDao operationDao) {
-        this.operationDao = operationDao;
     }
 
     public void setAip(AnimationInfoPull aip) {
