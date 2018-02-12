@@ -44,7 +44,7 @@ $(function(){
             $(this).attr("disabled",true);
             $(this).text('正在同步...');
             $.ajax({
-                url:'movie/movieInfoPull.do',
+                url:'/record/movie/movieInfoPull.do',
                 type:'post',
                 dataType:'json',
                 data:{'id':id.trim()},
@@ -97,7 +97,7 @@ $(function(){
         obj.introduce = $('#addMovieModal_textarea_introduce').val().trim();
 
         $.ajax({
-            url:'/movie/addMovie.do',
+            url:'/record/movie/addMovie.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -139,7 +139,7 @@ $(function(){
         obj.watchTime = $('#updateMovieModal_input_watchTime').val();
         obj.introduce = $('#updateMovieModal_textarea_introduce').val().trim();
         $.ajax({
-            url:'/movie/updateMovie.do',
+            url:'/record/movie/updateMovie.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -172,7 +172,7 @@ function loadMovieTableData(isSearch){
         'bServerSide': true,
         //查询请求action url
         'ajax': {
-            'url': '/movie/movieList.do',
+            'url': '/record/movie/movieList.do',
             'type':'post',
             'dataSrc': 'data',
             'data':function(d){
@@ -231,7 +231,7 @@ function loadMovieTableData(isSearch){
             {'data': 'level','width':'10%',render:function(data){
                 var html = '';
                 for(var i=0;i<data;i++){
-                    html+='<img src="/img/star.png">';
+                    html+='<img src="img/star.png">';
                 }
                 return '&nbsp;'+html;
             }},
@@ -254,7 +254,7 @@ function loadMovieTableData(isSearch){
 function updateMovieButtonInList(me){
     var id = $(me).prev().val();
     $.ajax({
-        url:'movie/getMovieInfo.do',
+        url:'/record/movie/getMovieInfo.do',
         type:'post',
         dataType:'json',
         data:{'id':id},

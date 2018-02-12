@@ -3,10 +3,10 @@ server:
 
 spring:
     datasource:
-        name: test
-        url: jdbc:mysql://127.0.0.1:3306/record?useSSL=false
+        name: datasource
+        url: jdbc:mysql://123.207.140.116:3306/record?useSSL=false
         username: root
-        password: 123456
+        password: c327433910
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
         maxActive: 20

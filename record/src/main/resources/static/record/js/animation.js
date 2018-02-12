@@ -58,7 +58,7 @@ $(function(){
             $(this).attr("disabled",true);
             $(this).text('正在同步...');
             $.ajax({
-                url:'animation/animationInfoPull.do',
+                url:'/record/animation/animationInfoPull.do',
                 type:'post',
                 dataType:'json',
                 data:{'id':id.trim()},
@@ -144,7 +144,7 @@ $(function(){
         obj.introduce = $('#addAnimationModal_textarea_introduce').val().trim();
 
         $.ajax({
-            url:'/animation/addAnimation.do',
+            url:'/record/animation/addAnimation.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -192,7 +192,7 @@ $(function(){
         }
         obj.introduce = $('#updateAnimationModal_textarea_introduce').val().trim();
         $.ajax({
-            url:'/animation/updateAnimation.do',
+            url:'/record/animation/updateAnimation.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -225,7 +225,7 @@ function loadAnimationTableData(isSearch){
         'bServerSide': true,
         //查询请求action url
         'ajax': {
-            'url': '/animation/animationList.do',
+            'url': '/record/animation/animationList.do',
             'type':'post',
             'dataSrc': 'data',
             'data':function(d){
@@ -299,7 +299,7 @@ function loadAnimationTableData(isSearch){
             {'data': 'level','width':'10%',render:function(data){
                 var html = '';
                 for(var i=0;i<data;i++){
-                    html+='<img src="/img/star.png">';
+                    html+='<img src="img/star.png">';
                 }
                 return '&nbsp;'+html;
             }},
@@ -322,7 +322,7 @@ function loadAnimationTableData(isSearch){
 function updateAnimationButtonInList(me){
     var id = $(me).prev().val();
     $.ajax({
-        url:'animation/getAnimationInfo.do',
+        url:'/record/animation/getAnimationInfo.do',
         type:'post',
         dataType:'json',
         data:{'id':id},

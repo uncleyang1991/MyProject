@@ -58,7 +58,7 @@ $(function(){
             $(this).attr("disabled",true);
             $(this).text('正在同步...');
             $.ajax({
-                url:'episode/episodeInfoPull.do',
+                url:'/record/episode/episodeInfoPull.do',
                 type:'post',
                 dataType:'json',
                 data:{'id':id.trim()},
@@ -144,7 +144,7 @@ $(function(){
         obj.introduce = $('#addEpisodeModal_textarea_introduce').val().trim();
 
         $.ajax({
-            url:'/episode/addEpisode.do',
+            url:'/record/episode/addEpisode.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -192,7 +192,7 @@ $(function(){
         }
         obj.introduce = $('#updateEpisodeModal_textarea_introduce').val().trim();
         $.ajax({
-            url:'/episode/updateEpisode.do',
+            url:'/record/episode/updateEpisode.do',
             data:obj,
             type:'post',
             dataType:'json',
@@ -225,7 +225,7 @@ function loadEpisodeTableData(isSearch){
         'bServerSide': true,
         //查询请求action url
         'ajax': {
-            'url': '/episode/episodeList.do',
+            'url': '/record/episode/episodeList.do',
             'type':'post',
             'dataSrc': 'data',
             'data':function(d){
@@ -299,7 +299,7 @@ function loadEpisodeTableData(isSearch){
             {'data': 'level','width':'10%',render:function(data){
                 var html = '';
                 for(var i=0;i<data;i++){
-                    html+='<img src="/img/star.png">';
+                    html+='<img src="img/star.png">';
                 }
                 return '&nbsp;'+html;
             }},
@@ -322,7 +322,7 @@ function loadEpisodeTableData(isSearch){
 function updateEpisodeButtonInList(me){
     var id = $(me).prev().val();
     $.ajax({
-        url:'episode/getEpisodeInfo.do',
+        url:'/record/episode/getEpisodeInfo.do',
         type:'post',
         dataType:'json',
         data:{'id':id},

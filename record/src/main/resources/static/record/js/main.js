@@ -1,5 +1,18 @@
 $(function(){
+    $.ajax({
+        url:'/record/main/checkLogin.do',
+        success:function(data){
+            if(data.success){
+                $('.main').show();
+                init();
+            }else{
+                location.href = "/record/login.html";
+            }
+        }
+    });
+});
 
+function init(){
     $.get("statistics.html",function(data){
         $("#statistics").html(data);
     });
@@ -34,4 +47,4 @@ $(function(){
             $("#animation").html(data);
         });
     });
-});
+}

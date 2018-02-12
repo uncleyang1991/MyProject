@@ -76,7 +76,7 @@ function pieOption(title,legendData,data){
         title : {
             text: title
         },
-        color:['#f60574', '#0b4fd4','#3ad387','#00d3d4','#d5008a'],
+        color:['#f60574', '#0b4fd4','#3ad387','#00d3d4','#d5008a','#2889d5','#d5002a','#d58d42'],
         tooltip : {
             trigger: 'item',
             formatter: "{b} : {c} 部 ({d}%)"
@@ -183,7 +183,7 @@ function init_statistics_charts(){
 //初始化当前数量
 function loadTotalCount(){
     $.ajax({
-        url:'/statistics/totalCount.do',
+        url:'/record/statistics/totalCount.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -210,7 +210,7 @@ function loadWatchTimeTrendChart(year){
     var watchTimeTrendChart = echarts.init(document.getElementById('watch_time_trend_div'));
     watchTimeTrendChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/watchTimeTrend.do',
+        url:'/record/statistics/watchTimeTrend.do',
         type:'post',
         dataType:'json',
         data:{'year':year},
@@ -290,7 +290,7 @@ function loadEpisodeTypeTopChart(){
     var episodeTypeTopChart = echarts.init(document.getElementById('episode_type_top_div'));
     episodeTypeTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/episodeTypeTop.do',
+        url:'/record/statistics/episodeTypeTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -325,7 +325,7 @@ function loadMovieTypeTopChart(){
     var movieTypeTopChart = echarts.init(document.getElementById('movie_type_top_div'));
     movieTypeTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/movieTypeTop.do',
+        url:'/record/statistics/movieTypeTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -365,7 +365,7 @@ function loadAnimationTypeTopChart(){
     var animationTypeTopChart = echarts.init(document.getElementById('animation_type_top_div'));
     animationTypeTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/animationTypeTop.do',
+        url:'/record/statistics/animationTypeTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -405,7 +405,7 @@ function loadEpisodePerformersTopChart(){
     var episodePerformersTopChart = echarts.init(document.getElementById('episode_performers_top_div'));
     episodePerformersTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/episodePerformersTop.do',
+        url:'/record/statistics/episodePerformersTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -440,7 +440,7 @@ function loadMoviePerformersTopChart(){
     var moviePerformersTopChart = echarts.init(document.getElementById('movie_performers_top_div'));
     moviePerformersTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/moviePerformersTop.do',
+        url:'/record/statistics/moviePerformersTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -480,7 +480,7 @@ function loadAnimationPerformersTopChart(){
     var animationPerformersTopChart = echarts.init(document.getElementById('animation_performers_top_div'));
     animationPerformersTopChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/animationPerformersTop.do',
+        url:'/record/statistics/animationPerformersTop.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -520,7 +520,7 @@ function loadEpisodeDramaTypePieChart(){
     var episodeDramaTypePieChart = echarts.init(document.getElementById('episode_drama_type_pie_div'));
     episodeDramaTypePieChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/episodeDramaTypePie.do',
+        url:'/record/statistics/episodeDramaTypePie.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -543,7 +543,7 @@ function loadMovieRegionPieChart(){
     var movieRegionPieChart = echarts.init(document.getElementById('movie_region_pie_div'));
     movieRegionPieChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/movieRegionPie.do',
+        url:'/record/statistics/movieRegionPie.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -566,7 +566,7 @@ function loadAnimationDramaTypePieChart(){
     var animationDramaTypePieChart = echarts.init(document.getElementById('animation_drama_type_pie_div'));
     animationDramaTypePieChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/animationDramaTypePie.do',
+        url:'/record/statistics/animationDramaTypePie.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -589,7 +589,7 @@ function loadLevelRadarChart(){
     var levelRadarChart = echarts.init(document.getElementById('level_radar_div'));
     levelRadarChart.showLoading({text: '正在计算数据...'  });
     $.ajax({
-        url:'/statistics/levelRadar.do',
+        url:'/record/statistics/levelRadar.do',
         type:'post',
         dataType:'json',
         success:function(data){
@@ -680,7 +680,7 @@ function loadOperationTable(isSearch){
         'bServerSide': true,
         //查询请求action url
         'ajax': {
-            'url': '/operation/operationList.do',
+            'url': '/record/operation/operationList.do',
             'type':'post',
             'dataSrc': 'data',
             'data':function(d){

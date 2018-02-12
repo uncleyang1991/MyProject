@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @Controller
-@RequestMapping(value="/animation",produces="application/json;charset=utf-8")
+@RequestMapping(value="/record/animation",produces="application/json;charset=utf-8")
 public class AnimationController {
 
     @Resource

@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @Controller
-@RequestMapping(value="/movie",produces="application/json;charset=utf-8")
+@RequestMapping(value="/record/movie",produces="application/json;charset=utf-8")
 public class MovieController {
 
     @Resource
