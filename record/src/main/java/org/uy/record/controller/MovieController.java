@@ -59,17 +59,11 @@ public class MovieController {
     @RequestMapping("/movieInfoPull.do")
     @ResponseBody
     public String movieInfoPull(@RequestParam String id){
-        MovieDto movie;
-        try{
-            movie = service.movieInfoPull(id);
-        }catch (Exception e){
-            e.printStackTrace();
-            return JsonTool.makeResultJson(false,"更新失败");
-        }
+        MovieDto movie = service.movieInfoPull(id);
         if(movie != null){
             return JsonTool.obj2json(movie);
         }
-        return JsonTool.makeResultJson(false,"更新失败");
+        return JsonTool.makeResultJson(false,"同步失败");
     }
 
     public void setService(MovieService service) {

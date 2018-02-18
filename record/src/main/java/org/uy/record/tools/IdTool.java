@@ -1,11 +1,15 @@
 package org.uy.record.tools;
 
+import org.apache.log4j.Logger;
+
 import java.util.UUID;
 
 /**
  * ID工具类
  */
 public class IdTool {
+
+    private final static Logger log = Logger.getLogger(IdTool.class);
 
     /**
      * 获取一个UUID

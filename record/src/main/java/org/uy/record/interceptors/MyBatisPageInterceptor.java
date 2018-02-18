@@ -9,8 +9,10 @@ import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
+import org.apache.log4j.Logger;
 import org.uy.record.page.PageParameter;
 import org.uy.record.page.PageResult;
+import org.uy.record.system.SystemCount;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,6 +24,8 @@ import java.util.Properties;
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class ,Integer.class}),
         @Signature(type = ResultSetHandler.class, method = "handleResultSets", args = { Statement.class }) })
 public class MyBatisPageInterceptor implements Interceptor {
+
+    private final Logger log = Logger.getLogger(MyBatisPageInterceptor.class);
 
     //线程变量
     private final ThreadLocal<PageParameter> threadLocal = new ThreadLocal<PageParameter>();
@@ -63,7 +67,8 @@ public class MyBatisPageInterceptor implements Interceptor {
                     totalRow = result.getInt(1);
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error("MyBatis分页拦截器异常 "+e.toString());
+                SystemCount.errorCount++;
             } finally {
                 if(pstm!=null){
                     pstm.close();

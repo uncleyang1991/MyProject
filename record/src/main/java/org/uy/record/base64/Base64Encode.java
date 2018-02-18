@@ -9,7 +9,6 @@ public class Base64Encode {
     public static String encode(String text){
         text += token;
         BASE64Encoder encoder = new BASE64Encoder();
-        String encodeStr = encoder.encode(text.getBytes());
-        return  encodeStr;
+        return encoder.encode(text.getBytes());
     }
 }

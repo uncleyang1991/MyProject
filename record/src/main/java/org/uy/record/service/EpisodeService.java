@@ -16,5 +16,5 @@ public interface EpisodeService {
 
     boolean updateEpisode(Map<String,Object> params);
 
-    EpisodeDto episodeInfoPull(String id) throws Exception;
+    EpisodeDto episodeInfoPull(String id);
 }

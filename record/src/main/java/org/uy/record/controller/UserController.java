@@ -1,29 +1,27 @@
 package org.uy.record.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.uy.record.entity.UserDto;
 import org.uy.record.service.UserService;
-import org.uy.record.tools.DateFormatTool;
+import org.uy.record.system.SystemCount;
 import org.uy.record.tools.JsonTool;
-import org.uy.record.tools.MailTool;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 
 @Controller
 @RequestMapping(value = "/record/main",produces = "application/json;charset=utf-8")
 public class UserController {
 
-    @Resource
-    private UserService service;
+    private final Logger log = Logger.getLogger(UserController.class);
 
     @Resource
-    private MailTool mailTool;
+    private UserService service;
 
     @RequestMapping("/login.do")
     @ResponseBody
@@ -35,16 +33,20 @@ public class UserController {
 
         if(username == null || password == null){
             //非法登录
-            mailTool.sendMail("记录平台登录告警","　　有用户于"+ DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",new Date())+"尝试非法登录记录平台。");
+            log.warn("有用户尝试非法登录记录平台");
+            SystemCount.warnCount++;
             return json;
         }
         UserDto loginUser = service.login(username,password);
         if(loginUser != null){
             session.setAttribute("loginUser",loginUser);
             json = JsonTool.makeResultJson(true,loginUser.getId()+"@"+loginUser.getUsername()+"@"+loginUser.getNickname());
+            SystemCount.loginCount++;
+            SystemCount.totalLoginCount++;
         }else{
             //密码错误
-            mailTool.sendMail("记录平台登录告警","　　有用户于"+ DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",new Date())+"尝试用错误口令登录，该用户输入的口令为："+password);
+            log.warn("有用户尝试用错误口令登录，该用户输入的口令为："+password);
+            SystemCount.warnCount++;
         }
         return json;
     }
@@ -63,7 +65,4 @@ public class UserController {
         this.service = service;
     }
 
-    public void setMailTool(MailTool mailTool) {
-        this.mailTool = mailTool;
-    }
 }

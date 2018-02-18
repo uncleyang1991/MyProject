@@ -58,17 +58,11 @@ public class EpisodeController {
     @RequestMapping("/episodeInfoPull.do")
     @ResponseBody
     public String episodeInfoPull(@RequestParam String id){
-        EpisodeDto episode;
-        try{
-            episode = service.episodeInfoPull(id);
-        }catch (Exception e){
-            e.printStackTrace();
-            return JsonTool.makeResultJson(false,"更新失败");
-        }
+        EpisodeDto episode = service.episodeInfoPull(id);
         if(episode != null){
             return JsonTool.obj2json(episode);
         }
-        return JsonTool.makeResultJson(false,"更新失败");
+        return JsonTool.makeResultJson(false,"同步失败");
     }
 
     public void setService(EpisodeService service) {
