@@ -7,17 +7,17 @@
     <select id="watchTimeTrend" parameterType="java.lang.String" resultType="map">
         select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'剧集' as type
         from
-          (select * from episode where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+        (select * from episode where DATE_FORMAT(watch_time,'%Y') = #{year}) a
         group by DATE_FORMAT(watch_time,'%Y-%m')
-          union
+        union
         select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'电影' as type
         from
-          (select * from movie where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+            (select * from movie where DATE_FORMAT(watch_time,'%Y') = #{year}) a
         group by DATE_FORMAT(watch_time,'%Y-%m')
-          union
+        union
         select DATE_FORMAT(watch_time,'%m') as month,count(1) as count,'动漫' as type
         from
-          (select * from animation where DATE_FORMAT(watch_time,'%Y') = #{year}) a
+            (select * from animation where DATE_FORMAT(watch_time,'%Y') = #{year}) a
         group by DATE_FORMAT(watch_time,'%Y-%m')
     </select>
 
