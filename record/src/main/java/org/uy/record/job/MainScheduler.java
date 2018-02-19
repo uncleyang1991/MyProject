@@ -24,21 +24,21 @@ public class MainScheduler {
 
             /**
              * 重置系统参数
-             * 每日0点2分触发任务
+             * 每日0点15秒触发任务
              */
             job = JobBuilder.newJob(ResetJob.class).withIdentity("resetJob","group1").build();
             trigger = TriggerBuilder.newTrigger().withIdentity("resetTrigger", "group1").
-                    withSchedule(CronScheduleBuilder.cronSchedule("0 2 0 * * ?")).build();
+                    withSchedule(CronScheduleBuilder.cronSchedule("15 0 0 * * ?")).build();
             scheduler.scheduleJob(job, trigger);
             log.info("重置系统参数任务配置完成");
 
             /**
              * 发送日常报告邮件
-             * 每日0点1分触发任务
+             * 每日0点5秒触发任务
              */
             job = JobBuilder.newJob(MailJob.class).withIdentity("mailJob","group1").build();
             trigger = TriggerBuilder.newTrigger().withIdentity("mailTrigger", "group1").
-                    withSchedule(CronScheduleBuilder.cronSchedule("0 1 0 * * ?")).build();
+                    withSchedule(CronScheduleBuilder.cronSchedule("5 0 0 * * ?")).build();
             scheduler.scheduleJob(job, trigger);
             log.info("日常报告任务配置完成");
 
