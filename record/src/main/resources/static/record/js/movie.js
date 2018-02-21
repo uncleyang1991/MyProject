@@ -123,6 +123,39 @@ $(function(){
         loadMovieTableData(true);
     });
 
+    //单击条目事件
+    $('#movie_table').on('click','tr',function(){
+        var id = $(this).children().children('input[type=hidden]').val();
+        if(id){
+            $.ajax({
+                url:'/record/movie/getMovieInfo.do',
+                type:'post',
+                dataType:'json',
+                data:{'id':id},
+                success:function(data){
+                    if(data.success&&!data.success){
+                        alert(data.msg);
+                    }
+                    var movie = data;
+                    $('#updateMovieModal_input_id').val(id);
+                    $('#updateMovieModal_input_name').val(movie.name);
+                    $('#updateMovieModal_input_type').val(movie.type);
+                    $('#updateMovieModal_input_region').val(movie.region);
+                    $('#updateMovieModal_input_duration').val(movie.duration);
+                    $('#updateMovieModal_input_director').val(movie.director);
+                    $('#updateMovieModal_input_performers').val(movie.performers);
+                    var showTime = new Date(movie.showTime);
+                    $('#updateMovieModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
+                    var watchTime = new Date(movie.watchTime);
+                    $('#updateMovieModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
+                    $('#updateMovieModal_textarea_introduce').val(movie.introduce);
+                    $('#updateMovieModal_select_level').val(movie.level);
+                    $('#updateMovieModal').modal('show');
+                }
+            });
+        }
+    });
+
     //剧集-信息更新按钮
     $('#updateMovieModal_button_submit').on('click',function(){
         var obj = {};
@@ -196,10 +229,10 @@ function loadMovieTableData(isSearch){
         'bInfo' : true, //是否显示页脚信息，DataTables插件左下角显示记录数
         'sPaginationType': 'full_numbers', //详细分页组，可以支持直接跳转到某页
         'columns': [
-            {'data': 'name','width':'10%',render:function(data){
+            {'data': 'name','width':'12%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'type','width':'8%',render:function(data){
+            {'data': 'type','width':'10%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
             {'data': 'region','width':'5%',render:function(data){
@@ -211,13 +244,13 @@ function loadMovieTableData(isSearch){
                 }
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'performers','width':'25%',render:function(data){
-                if(data.length>33){
-                    data = data.substr(0,33)+'...';
+            {'data': 'performers','width':'30%',render:function(data){
+                if(data.length>38){
+                    data = data.substr(0,38)+'...';
                 }
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'duration','width':'6%',render:function(data){
+            {'data': 'duration','width':'7%',render:function(data){
                 return  '&nbsp;&nbsp;'+data+' 分钟';
             }},
             {'data': 'showTime','width':'9%',render:function(data){
@@ -235,8 +268,8 @@ function loadMovieTableData(isSearch){
                 }
                 return '&nbsp;'+html;
             }},
-            {'data': 'id','width':'8%',render:function(data){
-                return '<input type="hidden" value='+data+'><button type="button" class="btn btn-default" data-toggle="modal" data-target="#updateMovieModal" onclick="updateMovieButtonInList(this)">更新</button>';
+            {'data': 'id','width':'0%',render:function(data){
+                return '<input type="hidden" value='+data+'>';
             }}
         ],
 
@@ -247,35 +280,5 @@ function loadMovieTableData(isSearch){
         //排序
         'sort':false,
         'aaSorting': []
-    });
-}
-
-//列表中更新剧集按钮事件
-function updateMovieButtonInList(me){
-    var id = $(me).prev().val();
-    $.ajax({
-        url:'/record/movie/getMovieInfo.do',
-        type:'post',
-        dataType:'json',
-        data:{'id':id},
-        success:function(data){
-            if(data.success&&!data.success){
-                alert(data.msg);
-            }
-            var movie = data;
-            $('#updateMovieModal_input_id').val(id);
-            $('#updateMovieModal_input_name').val(movie.name);
-            $('#updateMovieModal_input_type').val(movie.type);
-            $('#updateMovieModal_input_region').val(movie.region);
-            $('#updateMovieModal_input_duration').val(movie.duration);
-            $('#updateMovieModal_input_director').val(movie.director);
-            $('#updateMovieModal_input_performers').val(movie.performers);
-            var showTime = new Date(movie.showTime);
-            $('#updateMovieModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
-            var watchTime = new Date(movie.watchTime);
-            $('#updateMovieModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
-            $('#updateMovieModal_textarea_introduce').val(movie.introduce);
-            $('#updateMovieModal_select_level').val(movie.level);
-        }
     });
 }

@@ -16,3 +16,7 @@
     cursor:pointer;
 }
 
+#episode_table tr{
+    height: 51px;
+}
+
