@@ -15,5 +15,5 @@ public interface AnimationService {
 
     boolean updateAnimation(Map<String, Object> params);
 
-    AnimationDto animationInfoPull(String id) throws Exception;
+    AnimationDto animationInfoPull(String id);
 }

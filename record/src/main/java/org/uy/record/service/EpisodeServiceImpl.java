@@ -56,7 +56,7 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
-    public EpisodeDto episodeInfoPull(String id) throws Exception{
+    public EpisodeDto episodeInfoPull(String id){
         return eip.getEpisodeInfo(id);
     }
 

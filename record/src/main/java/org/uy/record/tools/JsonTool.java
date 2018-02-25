@@ -1,9 +1,13 @@
 package org.uy.record.tools;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.beanutils.BeanMap;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.log4j.Logger;
+import org.uy.record.system.SystemCount;
 
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -13,6 +17,8 @@ public class JsonTool {
 
     private static ObjectMapper mapper = new ObjectMapper();
 
+    private final static Logger log = Logger.getLogger(JsonTool.class);
+
     /**
      * 序列化
      */
@@ -20,9 +26,9 @@ public class JsonTool {
         String json = null;
         try {
             json = mapper.writeValueAsString(obj);
-        } catch (Exception e) {
-            System.err.println("json转换错误");
-            e.printStackTrace();
+        } catch (JsonProcessingException e) {
+            log.error("json转换异常 "+e.toString());
+            SystemCount.errorCount++;
         }
         return json;
     }
@@ -34,9 +40,9 @@ public class JsonTool {
         T t = null;
         try {
             t = mapper.readValue(json,clazz);
-        } catch (Exception e) {
-            System.err.println("json转换错误");
-            e.printStackTrace();
+        } catch (IOException e) {
+            log.error("json转换异常 "+e.toString());
+            SystemCount.errorCount++;
         }
         return t;
     }
@@ -59,10 +65,10 @@ public class JsonTool {
         try{
             obj = beanClass.newInstance();
             BeanUtils.populate(obj, map);
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            log.error(beanClass.getName()+"实例化异常 "+e.toString());
+            SystemCount.errorCount++;
         }
-
 
         return obj;
     }

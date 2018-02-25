@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @Controller
-@RequestMapping(value="/animation",produces="application/json;charset=utf-8")
+@RequestMapping(value="/record/animation",produces="application/json;charset=utf-8")
 public class AnimationController {
 
     @Resource
@@ -58,17 +58,11 @@ public class AnimationController {
     @RequestMapping("/animationInfoPull.do")
     @ResponseBody
     public String animationInfoPull(@RequestParam String id){
-        AnimationDto animation;
-        try{
-            animation = service.animationInfoPull(id);
-        }catch (Exception e){
-            e.printStackTrace();
-            return JsonTool.makeResultJson(false,"更新失败");
-        }
+        AnimationDto animation = service.animationInfoPull(id);
         if(animation != null){
             return JsonTool.obj2json(animation);
         }
-        return JsonTool.makeResultJson(false,"更新失败");
+        return JsonTool.makeResultJson(false,"同步失败");
     }
 
     public void setService(AnimationService service) {

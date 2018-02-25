@@ -2,7 +2,6 @@ package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
 import org.uy.record.dao.AnimationDao;
-import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.AnimationDto;
 import org.uy.record.module.AnimationInfoPull;
 import org.uy.record.page.DataTablesResult;
@@ -57,7 +56,7 @@ public class AnimationServiceImpl implements AnimationService {
     }
 
     @Override
-    public AnimationDto animationInfoPull(String id) throws Exception{
+    public AnimationDto animationInfoPull(String id){
         return aip.getAnimationInfo(id);
     }
 

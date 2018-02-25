@@ -16,5 +16,5 @@ public interface MovieService {
 
     boolean updateMovie(Map<String, Object> params);
 
-    MovieDto movieInfoPull(String id) throws Exception;
+    MovieDto movieInfoPull(String id);
 }

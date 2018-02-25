@@ -2,6 +2,7 @@ a {text-transform:none;text-decoration:none;}
 a:hover {text-decoration:underline}
 
 .main{
+    display: none;
     margin:30px auto;
     width:1800px;
 }

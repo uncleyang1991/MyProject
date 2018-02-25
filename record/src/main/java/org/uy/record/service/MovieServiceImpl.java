@@ -56,7 +56,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public MovieDto movieInfoPull(String id) throws Exception{
+    public MovieDto movieInfoPull(String id){
         return mip.getMovieInfo(id);
     }
 

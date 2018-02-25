@@ -10,7 +10,7 @@ import org.uy.record.tools.JsonTool;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping(value="/statistics",produces="application/json;charset=utf-8")
+@RequestMapping(value="/record/statistics",produces="application/json;charset=utf-8")
 public class StatisticsController {
 
     @Resource

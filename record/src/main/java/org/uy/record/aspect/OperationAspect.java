@@ -1,5 +1,6 @@
 package org.uy.record.aspect;
 
+import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,6 +10,7 @@ import org.uy.record.entity.AnimationDto;
 import org.uy.record.entity.EpisodeDto;
 import org.uy.record.entity.MovieDto;
 import org.uy.record.entity.OperationDto;
+import org.uy.record.system.SystemCount;
 import org.uy.record.tools.IdTool;
 import org.uy.record.tools.MapTool;
 
@@ -21,6 +23,8 @@ public class OperationAspect {
 
     @Resource
     private OperationDao operationDao;
+
+    private final Logger log = Logger.getLogger(OperationAspect.class);
 
     @Around("execution(public * org.uy.record.service.*Impl.update*(..)) || execution(public * org.uy.record.service.*Impl.add*(..))")
     public Object operation(ProceedingJoinPoint pjp){
@@ -42,7 +46,8 @@ public class OperationAspect {
                 operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),methodName.substring(0,index)));
             }
         }catch (Throwable throwable) {
-            throwable.printStackTrace();
+            log.error("操作记录添加失败 "+throwable.toString());
+            SystemCount.errorCount++;
             return false;
         }
         return true;

@@ -1,18 +1,19 @@
 server:
   port: 80
+  session:
+    timeout: 21600
 
 spring:
     datasource:
-        name: test
+        name: datasource
         url: jdbc:mysql://127.0.0.1:3306/record?useSSL=false
-        username: uy
-        password: 123456
+        username: root
+        password: c327433910
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        maxActive: 20
-        initialSize: 1
 
 mybatis:
     typeAliasesPackage: org.uy.record.entity
     mapperLocations: classpath:mapper/*Mapper.xml
     configLocation: classpath:mybatis.xml
+
