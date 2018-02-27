@@ -29,11 +29,11 @@ public class UserController {
         if(session.getAttribute("loginUser") != null){
             session.removeAttribute("loginUser");
         }
-        String json = JsonTool.makeResultJson(false,"口令错误");
+        String json = JsonTool.makeResultJson(false,"用户名或密码错误");
 
         if(username == null || password == null){
             //非法登录
-            log.warn("有用户尝试非法登录记录平台");
+            log.warn("有用户尝试非法登录Record系统");
             SystemCount.warnCount++;
             return json;
         }
@@ -44,8 +44,8 @@ public class UserController {
             SystemCount.loginCount++;
             SystemCount.totalLoginCount++;
         }else{
-            //密码错误
-            log.warn("有用户尝试用错误口令登录，该用户输入的口令为："+password);
+            //用户名或密码错误
+            log.warn("有用户尝试用错误的用户名或密码登录，该用户输入的用户名为："+username+"，密码为："+password);
             SystemCount.warnCount++;
         }
         return json;
