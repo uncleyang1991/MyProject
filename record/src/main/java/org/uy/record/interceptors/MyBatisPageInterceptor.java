@@ -49,8 +49,6 @@ public class MyBatisPageInterceptor implements Interceptor {
                 parameter = (PageParameter)metaStatementHandler.getValue("delegate.boundSql.parameterObject.pageParameter");
             }catch(BindingException be){
                 parameter = null;
-                log.error("MyBatis分页拦截器异常 "+be.toString());
-                SystemCount.errorCount++;
             }
             if(parameter==null){
                 return invocation.proceed();
