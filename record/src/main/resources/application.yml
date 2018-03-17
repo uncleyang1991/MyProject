@@ -1,12 +1,12 @@
 server:
-  port: 80
+  port: 32743
   session:
-    timeout: 21600
+    timeout: 10800
 
 spring:
   datasource:
     name: datasource
-    url: jdbc:mysql://123.207.140.116:3306/record?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/record?useSSL=false
     username: root
     password: c327433910
     type: com.zaxxer.hikari.HikariDataSource

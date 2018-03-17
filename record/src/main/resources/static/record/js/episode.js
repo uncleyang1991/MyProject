@@ -317,8 +317,8 @@ function loadEpisodeTableData(isSearch){
                 return '&nbsp;&nbsp;'+data;
             }},
             {'data': 'performers','width':'25%',render:function(data){
-                if(data.length>31){
-                    data = data.substr(0,31)+'...';
+                if(data.length>29){
+                    data = data.substr(0,29)+'...';
                 }
                 return '&nbsp;&nbsp;'+data;
             }},
