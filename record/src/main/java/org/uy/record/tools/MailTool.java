@@ -78,8 +78,6 @@ public class MailTool{
             transport.sendMessage(message, message.getAllRecipients());
 
             transport.close();
-
-            log.info("邮件: "+title+" 已发送");
         } catch (Exception e) {
             log.error("邮件发送异常 "+e.toString());
             SystemCount.errorCount++;

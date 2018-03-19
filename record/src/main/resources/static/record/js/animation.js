@@ -170,6 +170,52 @@ $(function(){
         loadAnimationTableData(true);
     });
 
+    //单击条目事件
+    $('#animation_table').on('click','tr',function(){
+        var id = $(this).children().children('input[type=hidden]').val();
+        if(id){
+            $.ajax({
+                url:'/record/animation/getAnimationInfo.do',
+                type:'post',
+                dataType:'json',
+                data:{'id':id},
+                success:function(data){
+                    if(data.success&&!data.success){
+                        alert(data.msg);
+                    }
+                    var animation = data;
+                    $('#updateAnimationModal_input_id').val(id);
+                    $('#updateAnimationModal_input_name').val(animation.name);
+                    $('#updateAnimationModal_input_type').val(animation.type);
+                    $('#updateAnimationModal_input_total').val(animation.total);
+                    $('#updateAnimationModal_input_writer').val(animation.writer);
+                    $('#updateAnimationModal_input_performers').val(animation.performers);
+                    var showTime = new Date(animation.showTime);
+                    $('#updateAnimationModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
+                    var watchTime = new Date(animation.watchTime);
+                    $('#updateAnimationModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
+
+                    if(animation.watchState === '已看完'){
+                        $('#updateAnimationModal_input_watchState').val('');
+                        $('#updateAnimationModal_input_watchState').attr("disabled","disabled");
+                        $('#updateAnimationModal_input_watchState').removeAttr("placeholder");
+                        $('#updateAnimationModal_select_watchState').val(animation.watchState);
+                    }else{
+                        $('#updateAnimationModal_input_watchState').removeAttr("disabled");
+                        $('#updateAnimationModal_input_watchState').attr("placeholder","必填");
+                        $('#updateAnimationModal_select_watchState').val('正在追');
+                        $('#updateAnimationModal_input_watchState').val(animation.watchState.substring(3,animation.watchState.indexOf('集了')));
+                    }
+                    $('#updateAnimationModal_textarea_introduce').val(animation.introduce);
+                    $('#updateAnimationModal_select_dramaType').val(animation.dramaType);
+                    $('#updateAnimationModal_select_level').val(animation.level);
+                    $('#updateAnimationModal_select_state').val(animation.isEnd);
+                    $('#updateAnimationModal').modal('show');
+                }
+            });
+        }
+    });
+
     //剧集-信息更新按钮
     $('#updateAnimationModal_button_submit').on('click',function(){
         var obj = {};
@@ -255,24 +301,36 @@ function loadAnimationTableData(isSearch){
             {'data': 'name','width':'14%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'type','width':'8%',render:function(data){
+            {'data': 'watchState','width':'8%',render:function(data){
+                var html;
+                if('已看完' === data){
+                    html = '<font color="red">'+data+'</font>';
+                }else{
+                    html = '<font color="green">'+data+'</font>';
+                }
+                return '&nbsp;&nbsp;'+html;
+            }},
+            {'data': 'type','width':'9%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
             {'data': 'dramaType','width':'5%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'performers','width':'22%',render:function(data){
-                if(data.length>28){
-                    data = data.substr(0,28)+'...';
+            {'data': 'performers','width':'25%',render:function(data){
+                if(data.length>32){
+                    data = data.substr(0,32)+'...';
                 }
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'total','width':'6%',render:function(data){
+            {'data': 'total','width':'7%',render:function(data){
+                if(data === 0){
+                    return '&nbsp;&nbsp;未知';
+                }
                 return  '&nbsp;&nbsp;'+data+' 集';
             }},
             {'data': 'isEnd','width':'6%',render:function(data){
                 var html;
-                if('完结'==data){
+                if('完结' === data){
                     html = '<font color="red">'+data+'</font>';
                 }else{
                     html = '<font color="green">'+data+'</font>';
@@ -287,15 +345,6 @@ function loadAnimationTableData(isSearch){
                 var date = new Date(data);
                 return '&nbsp;&nbsp;'+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日';
             }},
-            {'data': 'watchState','width':'8%',render:function(data){
-                var html;
-                if('已看完'==data){
-                    html = '<font color="red">'+data+'</font>';
-                }else{
-                    html = '<font color="green">'+data+'</font>';
-                }
-                return '&nbsp;&nbsp;'+html;
-            }},
             {'data': 'level','width':'10%',render:function(data){
                 var html = '';
                 for(var i=0;i<data;i++){
@@ -303,8 +352,8 @@ function loadAnimationTableData(isSearch){
                 }
                 return '&nbsp;'+html;
             }},
-            {'data': 'id','width':'8%',render:function(data){
-                return '<input type="hidden" value='+data+'><button type="button" class="btn btn-default" data-toggle="modal" data-target="#updateAnimationModal" onclick="updateAnimationButtonInList(this)">更新</button>';
+            {'data': 'id','width':'0%',render:function(data){
+                return '<input type="hidden" value='+data+'>';
             }}
         ],
 
@@ -315,48 +364,5 @@ function loadAnimationTableData(isSearch){
         //排序
         'sort':false,
         'aaSorting': []
-    });
-}
-
-//列表中更新剧集按钮事件
-function updateAnimationButtonInList(me){
-    var id = $(me).prev().val();
-    $.ajax({
-        url:'/record/animation/getAnimationInfo.do',
-        type:'post',
-        dataType:'json',
-        data:{'id':id},
-        success:function(data){
-            if(data.success&&!data.success){
-                alert(data.msg);
-            }
-            var animation = data;
-            $('#updateAnimationModal_input_id').val(id);
-            $('#updateAnimationModal_input_name').val(animation.name);
-            $('#updateAnimationModal_input_type').val(animation.type);
-            $('#updateAnimationModal_input_total').val(animation.total);
-            $('#updateAnimationModal_input_writer').val(animation.writer);
-            $('#updateAnimationModal_input_performers').val(animation.performers);
-            var showTime = new Date(animation.showTime);
-            $('#updateAnimationModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
-            var watchTime = new Date(animation.watchTime);
-            $('#updateAnimationModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
-
-            if(animation.watchState=='已看完'){
-                $('#updateAnimationModal_input_watchState').val('');
-                $('#updateAnimationModal_input_watchState').attr("disabled","disabled");
-                $('#updateAnimationModal_input_watchState').removeAttr("placeholder");
-                $('#updateAnimationModal_select_watchState').val(animation.watchState);
-            }else{
-                $('#updateAnimationModal_input_watchState').removeAttr("disabled");
-                $('#updateAnimationModal_input_watchState').attr("placeholder","必填");
-                $('#updateAnimationModal_select_watchState').val('正在追');
-                $('#updateAnimationModal_input_watchState').val(animation.watchState.substring(3,animation.watchState.indexOf('集了')));
-            }
-            $('#updateAnimationModal_textarea_introduce').val(animation.introduce);
-            $('#updateAnimationModal_select_dramaType').val(animation.dramaType);
-            $('#updateAnimationModal_select_level').val(animation.level);
-            $('#updateAnimationModal_select_state').val(animation.isEnd);
-        }
     });
 }

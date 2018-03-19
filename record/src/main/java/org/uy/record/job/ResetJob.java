@@ -1,19 +1,19 @@
 package org.uy.record.job;
 
 import org.apache.log4j.Logger;
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 import org.uy.record.system.SystemCount;
 
 import java.util.Date;
 
-public class ResetJob implements Job {
+@Component
+public class ResetJob{
 
     private final Logger log = Logger.getLogger(ResetJob.class);
 
-    @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+    @Scheduled(cron = "15 0 0 * * ?")
+    public void execute(){
 
         SystemCount.loginCount = 0;
         SystemCount.errorCount = 0;

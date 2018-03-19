@@ -170,6 +170,52 @@ $(function(){
         loadEpisodeTableData(true);
     });
 
+    //条目单击事件
+    $('#episode_table').on('click','tr',function(){
+        var id = $(this).children().children("input[type=hidden]").val();
+        if(id){
+            $.ajax({
+                url:'/record/episode/getEpisodeInfo.do',
+                type:'post',
+                dataType:'json',
+                data:{'id':id},
+                success:function(data){
+                    if(data.success&&!data.success){
+                        alert(data.msg);
+                    }
+                    var episode = data;
+                    $('#updateEpisodeModal_input_id').val(id);
+                    $('#updateEpisodeModal_input_name').val(episode.name);
+                    $('#updateEpisodeModal_input_type').val(episode.type);
+                    $('#updateEpisodeModal_input_total').val(episode.total);
+                    $('#updateEpisodeModal_input_writer').val(episode.writer);
+                    $('#updateEpisodeModal_input_performers').val(episode.performers);
+                    var showTime = new Date(episode.showTime);
+                    $('#updateEpisodeModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
+                    var watchTime = new Date(episode.watchTime);
+                    $('#updateEpisodeModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
+
+                    if(episode.watchState === '已看完'){
+                        $('#updateEpisodeModal_input_watchState').val('');
+                        $('#updateEpisodeModal_input_watchState').attr("disabled","disabled");
+                        $('#updateEpisodeModal_input_watchState').removeAttr("placeholder");
+                        $('#updateEpisodeModal_select_watchState').val(episode.watchState);
+                    }else{
+                        $('#updateEpisodeModal_input_watchState').removeAttr("disabled");
+                        $('#updateEpisodeModal_input_watchState').attr("placeholder","必填");
+                        $('#updateEpisodeModal_select_watchState').val('正在追');
+                        $('#updateEpisodeModal_input_watchState').val(episode.watchState.substring(3,episode.watchState.indexOf('集了')));
+                    }
+                    $('#updateEpisodeModal_textarea_introduce').val(episode.introduce);
+                    $('#updateEpisodeModal_select_dramaType').val(episode.dramaType);
+                    $('#updateEpisodeModal_select_level').val(episode.level);
+                    $('#updateEpisodeModal_select_state').val(episode.isEnd);
+                    $('#updateEpisodeModal').modal('show');
+                }
+            });
+        }
+    });
+
     //剧集-信息更新按钮
     $('#updateEpisodeModal_button_submit').on('click',function(){
         var obj = {};
@@ -185,7 +231,7 @@ $(function(){
         obj.showTime = $('#updateEpisodeModal_input_showTime').val();
         obj.watchTime = $('#updateEpisodeModal_input_watchTime').val();
         obj.state = $('#updateEpisodeModal_select_state').val();
-        if($('#updateEpisodeModal_select_watchState').val()=='正在追'){
+        if($('#updateEpisodeModal_select_watchState').val() === '正在追'){
             obj.watchState = '该看第'+$('#updateEpisodeModal_input_watchState').val().trim()+'集了';
         }else{
             obj.watchState = '已看完'
@@ -252,8 +298,17 @@ function loadEpisodeTableData(isSearch){
         'bInfo' : true, //是否显示页脚信息，DataTables插件左下角显示记录数
         'sPaginationType': 'full_numbers', //详细分页组，可以支持直接跳转到某页
         'columns': [
-            {'data': 'name','width':'14%',render:function(data){
+            {'data': 'name','width':'15%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
+            }},
+            {'data': 'watchState','width':'8%',render:function(data){
+                var html;
+                if('已看完' === data){
+                    html = '<font color="red">'+data+'</font>';
+                }else{
+                    html = '<font color="green">'+data+'</font>';
+                }
+                return '&nbsp;&nbsp;'+html;
             }},
             {'data': 'type','width':'8%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
@@ -261,18 +316,21 @@ function loadEpisodeTableData(isSearch){
             {'data': 'dramaType','width':'5%',render:function(data){
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'performers','width':'22%',render:function(data){
-                if(data.length>28){
-                    data = data.substr(0,28)+'...';
+            {'data': 'performers','width':'25%',render:function(data){
+                if(data.length>29){
+                    data = data.substr(0,29)+'...';
                 }
                 return '&nbsp;&nbsp;'+data;
             }},
-            {'data': 'total','width':'6%',render:function(data){
+            {'data': 'total','width':'7%',render:function(data){
+                if(data === 0){
+                    return '&nbsp;&nbsp;未知';
+                }
                 return  '&nbsp;&nbsp;'+data+' 集';
             }},
             {'data': 'isEnd','width':'6%',render:function(data){
                 var html;
-                if('完结'==data){
+                if('完结' === data){
                     html = '<font color="red">'+data+'</font>';
                 }else{
                     html = '<font color="green">'+data+'</font>';
@@ -287,24 +345,15 @@ function loadEpisodeTableData(isSearch){
                 var date = new Date(data);
                 return '&nbsp;&nbsp;'+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日';
             }},
-            {'data': 'watchState','width':'8%',render:function(data){
-                var html;
-                if('已看完'==data){
-                    html = '<font color="red">'+data+'</font>';
-                }else{
-                    html = '<font color="green">'+data+'</font>';
-                }
-                return '&nbsp;&nbsp;'+html;
-            }},
-            {'data': 'level','width':'10%',render:function(data){
+            {'data': 'level','width':'12%',render:function(data){
                 var html = '';
                 for(var i=0;i<data;i++){
                     html+='<img src="img/star.png">';
                 }
                 return '&nbsp;'+html;
             }},
-            {'data': 'id','width':'8%',render:function(data){
-                return '<input type="hidden" value='+data+'><button type="button" class="btn btn-default" data-toggle="modal" data-target="#updateEpisodeModal" onclick="updateEpisodeButtonInList(this)">更新</button>';
+            {'data': 'id','width':'0%',render:function(data){
+                return '<input type="hidden" value='+data+'>';
             }}
         ],
 
@@ -315,48 +364,5 @@ function loadEpisodeTableData(isSearch){
         //排序
         'sort':false,
         'aaSorting': []
-    });
-}
-
-//列表中更新剧集按钮事件
-function updateEpisodeButtonInList(me){
-    var id = $(me).prev().val();
-    $.ajax({
-        url:'/record/episode/getEpisodeInfo.do',
-        type:'post',
-        dataType:'json',
-        data:{'id':id},
-        success:function(data){
-            if(data.success&&!data.success){
-                alert(data.msg);
-            }
-            var episode = data;
-            $('#updateEpisodeModal_input_id').val(id);
-            $('#updateEpisodeModal_input_name').val(episode.name);
-            $('#updateEpisodeModal_input_type').val(episode.type);
-            $('#updateEpisodeModal_input_total').val(episode.total);
-            $('#updateEpisodeModal_input_writer').val(episode.writer);
-            $('#updateEpisodeModal_input_performers').val(episode.performers);
-            var showTime = new Date(episode.showTime);
-            $('#updateEpisodeModal_input_showTime').val(showTime.getFullYear()+'-'+(showTime.getMonth()+1)+'-'+showTime.getDate());
-            var watchTime = new Date(episode.watchTime);
-            $('#updateEpisodeModal_input_watchTime').val(watchTime.getFullYear()+'-'+(watchTime.getMonth()+1)+'-'+watchTime.getDate());
-
-            if(episode.watchState=='已看完'){
-                $('#updateEpisodeModal_input_watchState').val('');
-                $('#updateEpisodeModal_input_watchState').attr("disabled","disabled");
-                $('#updateEpisodeModal_input_watchState').removeAttr("placeholder");
-                $('#updateEpisodeModal_select_watchState').val(episode.watchState);
-            }else{
-                $('#updateEpisodeModal_input_watchState').removeAttr("disabled");
-                $('#updateEpisodeModal_input_watchState').attr("placeholder","必填");
-                $('#updateEpisodeModal_select_watchState').val('正在追');
-                $('#updateEpisodeModal_input_watchState').val(episode.watchState.substring(3,episode.watchState.indexOf('集了')));
-            }
-            $('#updateEpisodeModal_textarea_introduce').val(episode.introduce);
-            $('#updateEpisodeModal_select_dramaType').val(episode.dramaType);
-            $('#updateEpisodeModal_select_level').val(episode.level);
-            $('#updateEpisodeModal_select_state').val(episode.isEnd);
-        }
     });
 }

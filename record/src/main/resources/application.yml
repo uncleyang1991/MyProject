@@ -1,19 +1,23 @@
 server:
-  port: 80
+  port: 32743
   session:
-    timeout: 21600
+    timeout: 10800
 
 spring:
-    datasource:
-        name: datasource
-        url: jdbc:mysql://127.0.0.1:3306/record?useSSL=false
-        username: root
-        password: c327433910
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    name: datasource
+    url: jdbc:mysql://127.0.0.1:3306/record?useSSL=false
+    username: root
+    password: c327433910
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      read-only: false
+      connectionTimeout: 200000
+      maxLifetime: 28770
+      maximumPoolSize: 5
 
 mybatis:
-    typeAliasesPackage: org.uy.record.entity
-    mapperLocations: classpath:mapper/*Mapper.xml
-    configLocation: classpath:mybatis.xml
-
+  typeAliasesPackage: org.uy.record.entity
+  mapperLocations: classpath:mapper/*Mapper.xml
+  configLocation: classpath:mybatis.xml

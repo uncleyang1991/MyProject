@@ -10,7 +10,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/Record/pom.xml" />
-        <option value="$PROJECT_DIR$/record/pom.xml" />
+        <option value="$PROJECT_DIR$/show/pom.xml" />
+        <option value="$PROJECT_DIR$/controlcenter/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
