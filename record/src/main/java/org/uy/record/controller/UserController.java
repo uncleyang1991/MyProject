@@ -1,6 +1,7 @@
 package org.uy.record.controller;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,12 +17,12 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(value = "/record/main",produces = "application/json;charset=utf-8")
-public class UserController {
+public class UserController{
 
     private final Logger log = Logger.getLogger(UserController.class);
 
-    @Resource
-    private UserService service;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/login.do")
     @ResponseBody
@@ -37,7 +38,7 @@ public class UserController {
             SystemCount.warnCount++;
             return json;
         }
-        UserDto loginUser = service.login(username,password);
+        UserDto loginUser = userService.login(username,password);
         if(loginUser != null){
             session.setAttribute("loginUser",loginUser);
             json = JsonTool.makeResultJson(true,loginUser.getId()+"@"+loginUser.getUsername()+"@"+loginUser.getNickname());
@@ -60,9 +61,4 @@ public class UserController {
         }
         return json;
     }
-
-    public void setService(UserService service) {
-        this.service = service;
-    }
-
 }

@@ -317,8 +317,8 @@ function loadAnimationTableData(isSearch){
                 return '&nbsp;&nbsp;'+data;
             }},
             {'data': 'performers','width':'25%',render:function(data){
-                if(data.length>32){
-                    data = data.substr(0,32)+'...';
+                if(data.length>30){
+                    data = data.substr(0,30)+'...';
                 }
                 return '&nbsp;&nbsp;'+data;
             }},

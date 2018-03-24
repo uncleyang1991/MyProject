@@ -36,4 +36,5 @@ public class DataTablesResult<E> implements Serializable{
     public void setData(List<E> data) {
         this.data = data;
     }
+
 }
