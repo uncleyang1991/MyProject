@@ -31,7 +31,7 @@ public class EpisodeInfoPull {
 
             //剧名
             String name = celDoc.title();
-            name = name.substring(0,name.lastIndexOf(" 全部影人"));
+            name = name.substring(0,name.lastIndexOf(" "));
             dto.setName(name.trim());
 
             //类型

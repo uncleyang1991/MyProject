@@ -8,7 +8,7 @@ spring:
     name: datasource
     url: jdbc:mysql://123.207.140.116:3306/record?useSSL=false
     username: root
-    password: c327433910
+    password: 123456
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
     hikari:

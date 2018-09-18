@@ -31,7 +31,7 @@ public class MovieInfoPull {
 
             //片名
             String name = celDoc.title();
-            name = name.substring(0,name.lastIndexOf(" 全部影人"));
+            name = name.substring(0,name.lastIndexOf(" "));
             dto.setName(name.trim());
 
             Elements ps = celDoc.select(".movie-summary>.attrs").get(0).children();
