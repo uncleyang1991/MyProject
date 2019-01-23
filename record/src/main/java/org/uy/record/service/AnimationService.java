@@ -16,4 +16,6 @@ public interface AnimationService {
     boolean updateAnimation(Map<String, Object> params);
 
     AnimationDto animationInfoPull(String id);
+
+    boolean deleteAnimation(String id);
 }

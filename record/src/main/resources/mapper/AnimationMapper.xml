@@ -86,6 +86,13 @@
           id = #{id}
     </select>
 
+    <delete id="delete" parameterType="java.lang.String">
+        delete from
+          animation
+        where
+          id = #{id}
+    </delete>
+
     <resultMap type="org.uy.record.entity.AnimationDto" id="animationMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>

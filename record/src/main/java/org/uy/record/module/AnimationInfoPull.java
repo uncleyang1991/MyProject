@@ -78,7 +78,7 @@ public class AnimationInfoPull {
             //声优
             StringBuilder performers = new StringBuilder();
             for(Element h2:celDoc.getElementsByTag("h2")){
-                if("演员 Actor/Actress".equals(h2.text())){
+                if(h2.text().startsWith("演员")){
                     Element ul = h2.nextElementSibling();
                     Elements lis = ul.select("li");
                     for(Element e:lis){

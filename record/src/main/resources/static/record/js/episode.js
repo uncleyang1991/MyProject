@@ -200,11 +200,13 @@ $(function(){
                         $('#updateEpisodeModal_input_watchState').attr("disabled","disabled");
                         $('#updateEpisodeModal_input_watchState').removeAttr("placeholder");
                         $('#updateEpisodeModal_select_watchState').val(episode.watchState);
+                        $('#updateEpisodeModal_button_delete').hide()
                     }else{
                         $('#updateEpisodeModal_input_watchState').removeAttr("disabled");
                         $('#updateEpisodeModal_input_watchState').attr("placeholder","必填");
                         $('#updateEpisodeModal_select_watchState').val('正在追');
                         $('#updateEpisodeModal_input_watchState').val(episode.watchState.substring(3,episode.watchState.indexOf('集了')));
+                        $('#updateEpisodeModal_button_delete').show()
                     }
                     $('#updateEpisodeModal_textarea_introduce').val(episode.introduce);
                     $('#updateEpisodeModal_select_dramaType').val(episode.dramaType);
@@ -251,6 +253,28 @@ $(function(){
                 }
             }
         });
+    });
+
+    //剧集-弃剧按钮
+    $('#updateEpisodeModal_button_delete').on('click',function(){
+        if(confirm('弃剧的同时会销毁所有与该剧相关的记录,确定删除吗?')){
+            $('#updateEpisodeModal').modal('hide');
+            rid = $('#updateEpisodeModal_input_id').val();
+            $.ajax({
+                url:'/record/episode/deleteEpisode.do',
+                data:{id:rid},
+                type:'post',
+                dataType:'json',
+                success:function(result){
+                    if(result.success){
+                        $('#episode_table').DataTable().draw(false);
+                        $('#updateEpisodeModal').modal('hide');
+                    }else{
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
     });
 });
 

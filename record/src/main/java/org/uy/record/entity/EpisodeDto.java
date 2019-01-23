@@ -137,4 +137,22 @@ public class EpisodeDto extends BaseDto{
     public void setTotal(Integer total) {
         this.total = total;
     }
+
+    @Override
+    public String toString() {
+        return "EpisodeDto{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", total=" + total +
+                ", dramaType='" + dramaType + '\'' +
+                ", writer='" + writer + '\'' +
+                ", isEnd='" + isEnd + '\'' +
+                ", showTime=" + showTime +
+                ", watchTime=" + watchTime +
+                ", watchState='" + watchState + '\'' +
+                ", level=" + level +
+                ", performers='" + performers + '\'' +
+                ", introduce='" + introduce + '\'' +
+                '}';
+    }
 }

@@ -6,24 +6,29 @@
 
     <resultMap type="org.uy.record.entity.OperationDto" id="operationMap">
         <id property="id" column="id"/>
-        <result property="name" column="name"/>
-        <result property="type" column="type"/>
+        <result property="rid" column="rid"/>
         <result property="action" column="action"/>
         <result property="actionTime" column="action_time"/>
     </resultMap>
 
     <select id="findOperationBySearchItem" parameterType="map" resultMap="operationMap">
-        select
-          type,name,action,action_time
-        from
-          operation
+        select action,action_time,name from operation,
+        (select id,name from episode UNION select id,name from movie UNION select id,name from animation) a
+        where operation.rid = a.id
         order by action_time desc
     </select>
 
     <insert id="add" parameterType="org.uy.record.entity.OperationDto">
         insert into
-          operation (id,type,name,action,action_time)
+          operation (id,rid,action,action_time)
         values
-          (#{obj.id},#{obj.type},#{obj.name},#{obj.action},now())
+          (#{obj.id},#{obj.rid},#{obj.action},now())
     </insert>
+
+    <delete id="delete" parameterType="java.lang.String">
+        delete from
+          operation
+        where
+          rid = #{id}
+    </delete>
 </mapper>

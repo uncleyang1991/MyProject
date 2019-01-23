@@ -6,7 +6,7 @@ public class OperationDto extends BaseDto {
 
     private static final long serialVersionUID = -5568261643229156332L;
 
-    private String type;
+    private String rid;
 
     private String name;
 
@@ -17,27 +17,18 @@ public class OperationDto extends BaseDto {
     public OperationDto() {
     }
 
-    public OperationDto(String id,String type, String name, String action) {
+    public OperationDto(String id,String rid, String action) {
         this.id = id;
-        this.type = type;
-        this.name = name;
+        this.rid = rid;
         this.action = action;
     }
 
-    public String getType() {
-        return type;
+    public String getRid() {
+        return rid;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setRid(String rid) {
+        this.rid = rid;
     }
 
     public String getAction() {
@@ -54,5 +45,13 @@ public class OperationDto extends BaseDto {
 
     public void setActionTime(Date actionTime) {
         this.actionTime = actionTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

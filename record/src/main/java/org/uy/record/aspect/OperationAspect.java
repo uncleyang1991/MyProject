@@ -34,16 +34,16 @@ public class OperationAspect {
             if(!result){
                 return false;
             }
-            int index = 0;
+            int index;
             if((index = methodName.lastIndexOf("Episode")) != -1){
                 EpisodeDto episode = MapTool.mapToEpisode((Map<String,Object>)pjp.getArgs()[0]);
-                operationDao.add(new OperationDto(IdTool.getUUID(),"剧集",episode.getName(),methodName.substring(0,index)));
+                operationDao.add(new OperationDto(IdTool.getUUID(),episode.getId(),methodName.substring(0,index)));
             }else if((index = methodName.lastIndexOf("Movie"))!=-1){
                 MovieDto movie = MapTool.mapToMovie((Map<String,Object>)pjp.getArgs()[0]);
-                operationDao.add(new OperationDto(IdTool.getUUID(),"电影",movie.getName(),methodName.substring(0,index)));
+                operationDao.add(new OperationDto(IdTool.getUUID(),movie.getId(),methodName.substring(0,index)));
             }else if((index = methodName.lastIndexOf("Animation"))!=-1){
                 AnimationDto animation = MapTool.mapToAnimation((Map<String,Object>)pjp.getArgs()[0]);
-                operationDao.add(new OperationDto(IdTool.getUUID(),"动漫",animation.getName(),methodName.substring(0,index)));
+                operationDao.add(new OperationDto(IdTool.getUUID(),animation.getId(),methodName.substring(0,index)));
             }
         }catch (Throwable throwable) {
             log.error("操作记录添加失败 "+throwable.toString());

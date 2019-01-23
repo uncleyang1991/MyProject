@@ -12,4 +12,5 @@ import java.util.Map;
 public interface OperationDao extends BaseDao{
 
     PageResult<OperationDto> findOperationBySearchItem(@Param("item") Map<String, Object> item, @Param("pageParameter") PageParameter parameter);
+
 }

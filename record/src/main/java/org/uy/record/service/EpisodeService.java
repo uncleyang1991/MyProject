@@ -17,4 +17,6 @@ public interface EpisodeService {
     boolean updateEpisode(Map<String,Object> params);
 
     EpisodeDto episodeInfoPull(String id);
+
+    boolean deleteEpisode(String id);
 }

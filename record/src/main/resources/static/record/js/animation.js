@@ -37,7 +37,7 @@ $(function(){
     };
 
 
-    //初始化剧集模态框中播出时间和观看时间输入框的日历插件
+    //初始化动漫模态框中播出时间和观看时间输入框的日历插件
     $('#addAnimationModal_input_showTime,#addAnimationModal_input_watchTime,#updateAnimationModal_input_showTime,#updateAnimationModal_input_watchTime').datetimepicker({
         format: "yyyy-mm-dd",
         language:  'zh-CN',
@@ -92,7 +92,7 @@ $(function(){
         }
     });
 
-    //初始化添加剧集模态框中观看状态的选择事件
+    //初始化添加动漫模态框中观看状态的选择事件
     $('#addAnimationModal_select_watchState').on('change',function(selected){
         if($(selected.target).val()=='正在追'){
             $('#addAnimationModal_input_watchState').removeAttr("disabled");
@@ -103,7 +103,7 @@ $(function(){
             $('#addAnimationModal_input_watchState').removeAttr("placeholder");
         }
     });
-    //初始化修改剧集模态框中观看状态的选择事件
+    //初始化修改动漫模态框中观看状态的选择事件
     $('#updateAnimationModal_select_watchState').on('change',function(selected){
         if($(selected.target).val()=='正在追'){
             $('#updateAnimationModal_input_watchState').removeAttr("disabled");
@@ -115,14 +115,14 @@ $(function(){
         }
     });
 
-    //初始化添加剧集模态框中清除按钮事件
+    //初始化添加动漫模态框中清除按钮事件
     $('#addAnimationModal_button_clear').on('click',function(){
         $('#animation_form_add_animation')[0].reset();
         $('#addAnimationModal_input_watchState').removeAttr("disabled");
         $('#addAnimationModal_input_watchState').attr("placeholder","必填");
     });
 
-    //添加剧集模态框提交按钮事件
+    //添加动漫模态框提交按钮事件
     $("#addAnimationModal_button_submit").on('click',function(){
         var obj = {};
 
@@ -160,12 +160,12 @@ $(function(){
         });
     });
 
-    //剧集-清除条件按钮事件
+    //动漫-清除条件按钮事件
     $('#animation_button_clear_item').on('click',function(){
         $('#animation_form_search_item')[0].reset();
     });
 
-    //剧集-条件搜索按钮事件
+    //动漫-条件搜索按钮事件
     $('#animation_button_search').on('click',function(){
         loadAnimationTableData(true);
     });
@@ -200,11 +200,13 @@ $(function(){
                         $('#updateAnimationModal_input_watchState').attr("disabled","disabled");
                         $('#updateAnimationModal_input_watchState').removeAttr("placeholder");
                         $('#updateAnimationModal_select_watchState').val(animation.watchState);
+                        $('#updateAnimationModal_button_delete').hide()
                     }else{
                         $('#updateAnimationModal_input_watchState').removeAttr("disabled");
                         $('#updateAnimationModal_input_watchState').attr("placeholder","必填");
                         $('#updateAnimationModal_select_watchState').val('正在追');
                         $('#updateAnimationModal_input_watchState').val(animation.watchState.substring(3,animation.watchState.indexOf('集了')));
+                        $('#updateAnimationModal_button_delete').show()
                     }
                     $('#updateAnimationModal_textarea_introduce').val(animation.introduce);
                     $('#updateAnimationModal_select_dramaType').val(animation.dramaType);
@@ -216,7 +218,7 @@ $(function(){
         }
     });
 
-    //剧集-信息更新按钮
+    //动漫-信息更新按钮
     $('#updateAnimationModal_button_submit').on('click',function(){
         var obj = {};
 
@@ -251,6 +253,28 @@ $(function(){
                 }
             }
         });
+    });
+
+    //动漫-弃剧按钮
+    $('#updateAnimationModal_button_delete').on('click',function(){
+        if(confirm('弃番的同时会销毁所有与该番相关的记录,确定删除吗?')){
+            $('#updateAnimationModal').modal('hide');
+            rid = $('#updateAnimationModal_input_id').val();
+            $.ajax({
+                url:'/record/animation/deleteAnimation.do',
+                data:{id:rid},
+                type:'post',
+                dataType:'json',
+                success:function(result){
+                    if(result.success){
+                        $('#animation_table').DataTable().draw(false);
+                        $('#updateAnimationModal').modal('hide');
+                    }else{
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
     });
 });
 

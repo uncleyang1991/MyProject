@@ -33,9 +33,9 @@ public class OperationServiceImpl implements OperationService{
         List<ResultStrDto> resultStr = new ArrayList<ResultStrDto>();
         for(OperationDto dto:pageResult){
             if("add".equals(dto.getAction())){
-                resultStr.add(new ResultStrDto("row", DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",dto.getActionTime())+"&nbsp;增加了新"+dto.getType()+"《"+dto.getName()+"》"));
+                resultStr.add(new ResultStrDto("row", DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",dto.getActionTime())+"&nbsp;增加了《"+dto.getName()+"》"));
             }else if("update".equals(dto.getAction())){
-                resultStr.add(new ResultStrDto("row",DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",dto.getActionTime())+"&nbsp;更新了"+dto.getType()+"《"+dto.getName()+"》"));
+                resultStr.add(new ResultStrDto("row",DateFormatTool.dateToStr("yyyy-MM-dd HH:mm:ss",dto.getActionTime())+"&nbsp;更新了《"+dto.getName()+"》"));
             }
 
         }

@@ -64,4 +64,14 @@ public class AnimationController{
         }
         return JsonTool.makeResultJson(false,"同步失败");
     }
+
+    @RequestMapping("/deleteAnimation.do")
+    @ResponseBody
+    public String deleteAnimation(@RequestParam String id){
+        boolean flag = animationService.deleteAnimation(id);
+        if(flag){
+            return JsonTool.makeResultJson(true,"删除完成");
+        }
+        return JsonTool.makeResultJson(false,"删除失败");
+    }
 }

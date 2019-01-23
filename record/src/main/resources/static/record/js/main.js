@@ -13,6 +13,7 @@ $(function(){
 });
 
 function init(){
+
     $.get("statistics.html",function(data){
         $("#statistics").html(data);
     });

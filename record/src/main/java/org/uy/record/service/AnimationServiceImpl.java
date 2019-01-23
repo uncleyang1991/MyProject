@@ -1,7 +1,9 @@
 package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.uy.record.dao.AnimationDao;
+import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.AnimationDto;
 import org.uy.record.module.AnimationInfoPull;
 import org.uy.record.page.DataTablesResult;
@@ -18,6 +20,8 @@ public class AnimationServiceImpl implements AnimationService {
 
     @Resource()
     private AnimationDao animationDao;
+    @Resource()
+    private OperationDao operationDao;
 
     @Resource
     private AnimationInfoPull aip;
@@ -58,6 +62,20 @@ public class AnimationServiceImpl implements AnimationService {
     @Override
     public AnimationDto animationInfoPull(String id){
         return aip.getAnimationInfo(id);
+    }
+
+    @Override
+    @Transactional
+    public boolean deleteAnimation(String id) {
+        boolean flag;
+        try{
+            operationDao.delete(id);
+            animationDao.delete(id);
+            flag = true;
+        }catch (Exception e){
+            flag = false;
+        }
+        return flag;
     }
 
     public void setAnimationDao(AnimationDao animationDao) {

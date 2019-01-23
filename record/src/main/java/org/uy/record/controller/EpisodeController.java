@@ -64,4 +64,14 @@ public class EpisodeController{
         }
         return JsonTool.makeResultJson(false,"同步失败");
     }
+
+    @RequestMapping("/deleteEpisode.do")
+    @ResponseBody
+    public String deleteEpisode(@RequestParam String id){
+        boolean flag = episodeService.deleteEpisode(id);
+        if(flag){
+            return JsonTool.makeResultJson(true,"删除完成");
+        }
+        return JsonTool.makeResultJson(false,"删除失败");
+    }
 }

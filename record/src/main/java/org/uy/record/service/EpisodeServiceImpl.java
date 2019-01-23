@@ -1,7 +1,9 @@
 package org.uy.record.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.uy.record.dao.EpisodeDao;
+import org.uy.record.dao.OperationDao;
 import org.uy.record.entity.EpisodeDto;
 import org.uy.record.module.EpisodeInfoPull;
 import org.uy.record.page.DataTablesResult;
@@ -18,6 +20,8 @@ public class EpisodeServiceImpl implements EpisodeService {
 
     @Resource()
     private EpisodeDao episodeDao;
+    @Resource()
+    private OperationDao operationDao;
 
     @Resource
     private EpisodeInfoPull eip;
@@ -58,6 +62,20 @@ public class EpisodeServiceImpl implements EpisodeService {
     @Override
     public EpisodeDto episodeInfoPull(String id){
         return eip.getEpisodeInfo(id);
+    }
+
+    @Override
+    @Transactional
+    public boolean deleteEpisode(String id) {
+        boolean flag;
+        try{
+            operationDao.delete(id);
+            episodeDao.delete(id);
+            flag = true;
+        }catch (Exception e){
+            flag = false;
+        }
+        return flag;
     }
 
     public void setEpisodeDao(EpisodeDao episodeDao) {
