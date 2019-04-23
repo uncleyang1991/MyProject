@@ -51,7 +51,7 @@
                 and show_time between str_to_date(concat(#{item.seasonYear},'-01-01'), '%Y-%m-%d') and str_to_date(concat(#{item.seasonYear},'-03-31'), '%Y-%m-%d')
             </if>
         </if>
-		order by case when watch_state = '已看完' then 0 else 1 end desc,create_time desc
+		order by case when watch_state = '已看完' then 0 else 1 end desc,watch_time desc
     </select>
 
     <insert id="add" parameterType="org.uy.record.entity.EpisodeDto">

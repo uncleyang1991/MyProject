@@ -2,36 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
     <title>豆瓣</title>
 
     <link rel="stylesheet" href="css/base/bootstrap.min.css">
+    <link rel="stylesheet" href="css/douban.css">
 
     <script src="js/base/jquery.min.js"></script>
     <script src="js/base/bootstrap.min.js"></script>
-
-    <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-        }
-
-        #toolbar_div {
-            width: 100%;
-            height: 50px;
-        }
-
-        #web_div,#web_frame {
-            width: 100%;
-            height: 800px;
-        }
-    </style>
+    <script src="js/base/clipboard.min.js"></script>
 </head>
 <body>
 <div>
-    <div id="toolbar_div"></div>
-    <div id="web_div">
+    <input type="hidden" id="cp_hgz_input">
+    <form id="douban_form_search" class="form-inline">
+        <div class="form-group">
+            <div class="input-group">
+                <input id="douban_input_search" type="text" class="form-control" placeholder="请输入名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <button id="douban_button_search" type="button" title="搜索" class="btn btn-primary">搜索</button>
+            </div>
+        </div>
+    </form>
+    <div id="douban_div_search_items">
 
     </div>
 </div>
+<script src="js/douban.js"></script>
 </body>
 </html>

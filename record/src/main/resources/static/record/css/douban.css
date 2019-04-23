@@ -1,0 +1,25 @@
+#douban_form_search{
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+#douban_div_search_items{
+    padding-top: 15px;
+    margin-left: 20px;
+    height:740px;
+}
+
+img{
+    height: 377px;
+    width: 277px;
+    display: block;
+}
+
+span{
+    display: block;
+}
+
+div[name='item']{
+    margin-right: 19px;
+    margin-bottom: 20px;
+}

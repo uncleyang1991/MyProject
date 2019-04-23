@@ -13,3 +13,12 @@ a:hover {text-decoration:underline}
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
+#toolbar_div {
+    width: 100%;
+    height: 50px;
+}
+
+#web_div,#web_frame {
+    width: 100%;
+    height: 800px;
+}

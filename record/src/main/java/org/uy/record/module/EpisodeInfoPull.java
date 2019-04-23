@@ -122,9 +122,9 @@ public class EpisodeInfoPull {
         return dto;
     }
 
-    public static void main(String[] args) {
-        EpisodeDto e = new EpisodeInfoPull().getEpisodeInfo("27202985");
-        System.out.println(e);
+    public static void main(String[] args) throws Exception{
+        Document document = Jsoup.connect("https://movie.douban.com/subject_search?search_text=%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A").get();
+        System.out.println(document);
     }
 
 }

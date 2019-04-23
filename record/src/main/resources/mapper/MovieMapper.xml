@@ -26,7 +26,7 @@
         <if test="item.performers != null and item.performers != ''">
           and performers like #{item.performers}
         </if>
-		order by create_time desc
+		order by watch_time desc
     </select>
 
     <insert id="add" parameterType="org.uy.record.entity.MovieDto">
